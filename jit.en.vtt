@@ -1778,203 +1778,218 @@ options you're passing to configure…
 23:06.279 --> 23:08.000 align:start position:0%
 things just work.
 
-23:08.000 --> 23:11.720 align:start position:0%
-And I think that's it! So, no questions, thank you!
+23:08.500 --> 23:11.000
+And, I think that's it!
 
-23:11.720 --> 23:16.510 align:start position:0%
+23:11.100 --> 23:13.000
+So, no questions, thank you.
+
+23:13.200 --> 23:18.000 align:start position:0%
 [Applause]
 
-23:16.510 --> 23:20.840 align:start position:0%
+23:23.400 --> 23:25.780
+Victor? Did you have a question...
 
+23:26.050 --> 23:28.450
+Okay, Carol, yeah?  [Carol] No, I was going to say:
 
-23:20.840 --> 23:24.120 align:start position:0%
-you uh sorry
+23:28.550 --> 23:29.950
+How does it compare to Numba?
 
-23:24.120 --> 23:27.440 align:start position:0%
-Victor did you have a question okay yeah
+23:30.050 --> 23:31.400 align:start position:0%
+Does it work with GPUs?
 
-23:27.440 --> 23:29.480 align:start position:0%
-no I was to say how does it compare to
-
-23:29.480 --> 23:32.039 align:start position:0%
-number does it work with gpus uh how
-
-23:32.039 --> 23:34.039 align:start position:0%
-does it to compare in terms of speed
+23:31.600 --> 23:34.000 align:start position:0%
+[Brandt] Uh, how does it to compare in terms of speed?
 
 23:34.039 --> 23:36.159 align:start position:0%
-yeah uh So currently it is no faster
+[Carol] Yeah. [Brandt] So currently it is no faster
 
 23:36.159 --> 23:37.480 align:start position:0%
-than main when you have this turned on
+than main when you have this turned on,
 
 23:37.480 --> 23:39.880 align:start position:0%
 but that represents a 5% improvement
 
 23:39.880 --> 23:43.080 align:start position:0%
-over the Micro Ops that it's based on um
+over the Micro Ops that it's based on,
 
-23:43.080 --> 23:44.440 align:start position:0%
-and we haven't done any of the fun
+23:43.080 --> 23:45.200 align:start position:0%
+and we haven't done any of the fun tricks yet.
 
-23:44.440 --> 23:48.120 align:start position:0%
-tricks yet okay um so it's much slower
+23:46.900 --> 23:48.800 align:start position:0%
+So it's much slower than Numba.
 
-23:48.120 --> 23:51.520 align:start position:0%
-than number um and what was the other
+23:50.150 --> 23:53.000 align:start position:0%
+And what was the other question? Numba...
 
-23:51.520 --> 23:55.760 align:start position:0%
-question number a GPU support GPU
+23:53.000 --> 23:54.800 align:start position:0%
+[Carol] GPU support.
 
-23:55.760 --> 23:58.559 align:start position:0%
-support I would guess just as well as LM
+23:55.000 --> 23:56.725
+[Brandt] GPU support,
+
+23:56.725 --> 23:58.450
+I would guess just as well as LLVM
 
 23:58.559 --> 24:00.720 align:start position:0%
-supports gpus so I I have I'm not doing
+supports GPU, so I, I'm not doing
 
-24:00.720 --> 24:04.200 align:start position:0%
-anything special yeah they aren CPUs
+24:00.720 --> 24:02.460
+anything special. Yeah.
 
-24:04.200 --> 24:05.720 align:start position:0%
-resources AR in the right place so it's
+24:02.460 --> 24:04.500
+[Unknown] So if they aren CPUs, the resources
 
-24:05.720 --> 24:07.760 align:start position:0%
-we yeah it's nice because for things
+24:04.700 --> 24:05.800 align:start position:0%
+aren't in the right place, so it's...
+
+24:06.000 --> 24:07.760 align:start position:0%
+[Brandt] Yeah, it's nice because for things
 
 24:07.760 --> 24:10.360 align:start position:0%
 like platform support or more specific
 
 24:10.360 --> 24:12.559 align:start position:0%
-like Hardware integration we can just
+like, hardware integration, we can just
 
 24:12.559 --> 24:14.559 align:start position:0%
-piggy back on LM so if there's a way to
+piggyback on LLVM. So if there's a way to
 
 24:14.559 --> 24:16.640 align:start position:0%
-make lbm uh use the gpus more
+make LLVM uh use the gpus more
 
 24:16.640 --> 24:18.360 align:start position:0%
-effectively then we can harness that too
+effectively then we can harness that too.
 
 24:18.360 --> 24:22.360 align:start position:0%
-at least for that build yes okay
+At least for that build. [Carol] Yes, okay.
 
-24:22.360 --> 24:25.520 align:start position:0%
-yeah Victor the thing about container is
+24:23.300 --> 24:25.520 align:start position:0%
+Victor? [Victor] The thing about container is
 
-24:25.520 --> 24:36.039 align:start position:0%
+24:25.550 --> 24:28.900
+it possible on Linux to generate the,
 
+24:29.100 --> 24:32.500
+the generated part for all platforms, from Linux?
 
-24:36.039 --> 24:38.000 align:start position:0%
-theats you don't you don't need the
+24:32.500 --> 24:34.800
+[Unknown] You can do a cross-compiler container,
 
-24:38.000 --> 24:40.200 align:start position:0%
-container so if you install the cross
+24:34.900 --> 24:36.039
+with 20 cross-compilers in it, I think.
 
-24:40.200 --> 24:43.120 align:start position:0%
-compiler tool chain um LM knows how to
+24:36.039 --> 24:38.500 align:start position:0%
+You don't need the container,
 
-24:43.120 --> 24:44.480 align:start position:0%
-find that and you can just build them
+24:38.500 --> 24:41.800 align:start position:0%
+so if you install the cross-compiler tool chain,
 
-24:44.480 --> 24:46.000 align:start position:0%
-all because you you don't actually need
+24:42.500 --> 24:43.500 align:start position:0%
+LLVM knows how to find that,
 
-24:46.000 --> 24:48.360 align:start position:0%
-to run anything for this he really wants
+24:43.500 --> 24:44.600 align:start position:0%
+and you can just build them all.
 
-24:48.360 --> 24:50.559 align:start position:0%
-to use a
+24:44.800 --> 24:46.400 align:start position:0%
+'cause you don't actually need to
 
-24:50.559 --> 24:53.520 align:start position:0%
-container when you ask people to install
+24:46.600 --> 24:48.000 align:start position:0%
+run anything for this...
 
-24:53.520 --> 24:56.360 align:start position:0%
-LM they get different flavor different
+24:48.000 --> 24:50.300 align:start position:0%
+[Unknown] He really wants to use a container. [Unknown] He does!
 
-24:56.360 --> 24:59.200 align:start position:0%
-FL and output can
+24:51.300 --> 24:54.000 align:start position:0%
+When you ask people to install LLVM,
+
+24:54.000 --> 24:55.900 align:start position:0%
+they get different flavor,
+
+24:55.900 --> 24:59.000 align:start position:0%
+different [???], and the output can change,
 
 24:59.200 --> 25:01.880 align:start position:0%
-change config to put everything in
+so maybe to configure it, put everything in
 
 25:01.880 --> 25:04.799 align:start position:0%
-container we know that you always get
+a container we know that you always get
 
-25:04.799 --> 25:07.919 align:start position:0%
-exactly the same yeah we that is
+25:04.799 --> 25:07.200 align:start position:0%
+exactly the same output. [Brandt] Yeah, we,
 
-25:07.919 --> 25:09.480 align:start position:0%
-definitely something important but again
+25:07.400 --> 25:09.480 align:start position:0%
+that is definitely something important, but again
 
 25:09.480 --> 25:11.080 align:start position:0%
 remember this also depends on configure
 
 25:11.080 --> 25:14.520 align:start position:0%
-flag so it's only as stable as those um
+flags, so it's only as stable as those.
 
 25:14.520 --> 25:17.720 align:start position:0%
-also on top of that I I mean I have test
+Also on top of that, I mean, I have test,
 
 25:17.720 --> 25:20.200 align:start position:0%
 I do have CI running this on all the
 
-25:20.200 --> 25:24.120 align:start position:0%
-platforms I listed there um and uh it's
+25:20.200 --> 25:21.800 align:start position:0%
+platforms I listed there,
 
-25:24.120 --> 25:25.679 align:start position:0%
-also tested against the full Matrix of
+25:24.000 --> 25:25.679 align:start position:0%
+it's also tested against the full Matrix of
 
 25:25.679 --> 25:28.799 align:start position:0%
-LM 14 15 and 16 so for all three of
+LLVM 14, 15, and 16, so for all three of
 
 25:28.799 --> 25:31.200 align:start position:0%
-those um I've verified that this passes
+those I've verified that this passes
 
-25:31.200 --> 25:32.679 align:start position:0%
-the entire test
+25:31.200 --> 25:33.200 align:start position:0%
+the entire test suite.
 
-25:32.679 --> 25:36.399 align:start position:0%
-Suite so are you going to checking
+25:33.500 --> 25:35.500 align:start position:0%
+[Victor] So are you going to checkin this file
 
-25:36.399 --> 25:38.679 align:start position:0%
-this I have no plans
+25:35.500 --> 25:39.000 align:start position:0%
+in Python? [Brandt] I have no plans to.
 
-25:38.679 --> 25:40.960 align:start position:0%
-to we
+25:39.800 --> 25:41.800 align:start position:0%
+[Unknown] We should. [Victor] We should not...
 
-25:40.960 --> 25:42.880 align:start position:0%
-should you can host a bunch of them
+25:41.800 --> 25:44.500 align:start position:0%
+[Brandt] You can host a bunch of them somewhere if you want.
 
-25:42.880 --> 25:45.440 align:start position:0%
-
-
-25:45.440 --> 25:47.360 align:start position:0%
-want like I'm not sure we're going to
+25:46.400 --> 25:47.360 align:start position:0%
+[Unknown] It's like, I'm not sure we're going to
 
 25:47.360 --> 25:48.919 align:start position:0%
-need a container basically it sounds
+need a container. Basically it sounds
 
-25:48.919 --> 25:52.000 align:start position:0%
-like this is working on things
+25:48.919 --> 25:50.400 align:start position:0%
+like this is working on a wide variety
 
-25:52.000 --> 25:55.399 align:start position:0%
-syst get yeah and if you
+25:50.400 --> 25:52.400 align:start position:0%
+of things, it's just a matter of...
 
-25:55.399 --> 25:58.760 align:start position:0%
-checking problem for people building
+25:54.000 --> 25:56.000
+... is pip installing LLVM, 
 
-25:58.760 --> 26:01.520 align:start position:0%
-and yeah people in this room probably
+25:56.000 --> 25:58.100 align:start position:0%
+ problem for people building Python?
 
-26:01.520 --> 26:04.559 align:start position:0%
-not and if you check out my Branch too
+26:00.000 --> 26:02.300 align:start position:0%
+For the people in this room it's probably not, but...
 
-26:04.559 --> 26:07.679 align:start position:0%
-uh there's a read me in tools jit um it
+26:02.300 --> 26:04.559 align:start position:0%
+And if you check out my branch, too,
 
-26:07.679 --> 26:09.640 align:start position:0%
-tells you how to install lvm on all
+26:04.559 --> 26:07.200 align:start position:0%
+there's a README in tools/jit,
+
+26:07.400 --> 26:09.650 align:start position:0%
+it tells you how to install LLVM on all
 
 26:09.640 --> 26:11.360 align:start position:0%
 platforms and again one thing I want to
@@ -1983,136 +1998,148 @@ platforms and again one thing I want to
 highlight is you don't need to build
 
 26:13.640 --> 26:15.760 align:start position:0%
-cpython itself with lovm or even the
+CPython itself with LLVM, or even the
 
 26:15.760 --> 26:18.399 align:start position:0%
-same version of lovm lovm is only used
+same version of LLVM. LLVM is only used
 
-26:18.399 --> 26:20.279 align:start position:0%
-for just for generating that one header
+26:18.399 --> 26:20.500 align:start position:0%
+just for generating that one header file.
 
-26:20.279 --> 26:24.640 align:start position:0%
-file um so when you get a t of python
+26:21.500 --> 26:24.640 align:start position:0%
+[Victor] So far, when you get a tarball of Python,
 
 26:24.640 --> 26:28.559 align:start position:0%
-you don't need LM so it would be
+you don't need LLVM, so it would be a new dependency?
 
-26:28.559 --> 26:31.000 align:start position:0%
-yes if if you want to build the jit yes
+26:28.900 --> 26:31.000 align:start position:0%
+If, if you want to build the JIT, yes.
 
 26:31.000 --> 26:32.919 align:start position:0%
-um so I imagine this behind a configure
+So I imagine this behind a configure
 
 26:32.919 --> 26:36.840 align:start position:0%
-flag um where I mean just just
+flag, where, I mean, just, just,
 
 26:36.840 --> 26:39.760 align:start position:0%
-spitballing here um if you don't pass
+spitballing here: If you don't pass
 
 26:39.760 --> 26:41.080 align:start position:0%
 the configure flag and you don't have
 
 26:41.080 --> 26:44.240 align:start position:0%
-lovm installed um we don't do we just do
+LLVM installed, we don't do, we just do
 
 26:44.240 --> 26:47.080 align:start position:0%
-a normal build if we smell that lovm is
+a normal build. If we smell that LLVM is
 
 26:47.080 --> 26:48.640 align:start position:0%
 nearby but you didn't pass the flag we
 
 26:48.640 --> 26:50.159 align:start position:0%
-can say hey by the way you can build a
+can say: "Hey, by the way, you can build a
 
 26:50.159 --> 26:52.000 align:start position:0%
-jit if you want to and if you do pass
+JIT if you want to." And if you do pass
 
-26:52.000 --> 26:55.039 align:start position:0%
-the flag then we build the
+26:52.000 --> 26:54.600 align:start position:0%
+the flag then we build the JIT.
 
-26:55.039 --> 26:59.279 align:start position:0%
-jit you can also leave work for fure of
+26:56.000 --> 26:59.279 align:start position:0%
+[Unknown] You can also leave work for a future of
 
-26:59.279 --> 27:05.120 align:start position:0%
+26:59.279 --> 27:00.100
+seeing if you can make something
 
+27:00.100 --> 27:03.000
+work on other compilers...
+
+27:03.000 --> 27:05.120
+... becomes a section of work for each compiler.
 
 27:05.120 --> 27:09.000 align:start position:0%
-comp just just that making that configur
+[Unknown] Just that making that configure
 
 27:09.000 --> 27:11.000 align:start position:0%
 flag an optional thing is pretty much
 
-27:11.000 --> 27:14.000 align:start position:0%
-Essential for iOS because or or like web
+27:11.000 --> 27:13.800 align:start position:0%
+essential for iOS... [Brandt] Or like
 
-27:14.000 --> 27:15.520 align:start position:0%
-assembly for example or any of the list
+27:13.800 --> 27:15.500 align:start position:0%
+WebAssembly for example, or any of the list
 
 27:15.520 --> 27:17.080 align:start position:0%
-of tier three platforms that we
+of tier-3 platforms that we
 
 27:17.080 --> 27:20.240 align:start position:0%
-absolutely can't build for
+absolutely can't build for.
 
 27:20.240 --> 27:23.640 align:start position:0%
-yeah uh public sorry I should say names
+Uh, Pablo, sorry, I should say names.
 
-27:23.640 --> 27:25.520 align:start position:0%
-do you need any special
+27:23.640 --> 27:25.650 align:start position:0%
+[Pablo] Do you need any special, like,
 
-27:25.520 --> 27:28.679 align:start position:0%
-like for mic like call that they has
+27:25.650 --> 27:27.200 align:start position:0%
+magic thingies for macOS, like,
 
-27:28.679 --> 27:31.520 align:start position:0%
-some protections
+27:27.300 --> 27:29.300
+I recall that it has some protections,
+
+27:29.300 --> 27:31.550
+and it's like, ...
 
 27:31.520 --> 27:35.120 align:start position:0%
-like this is I mean jits work on Mac OS
+[Brandt] This is, I mean, JITs work on macOS,
 
 27:35.120 --> 27:36.600 align:start position:0%
-so you can't have you can't have
+so you can't have, you can't have
 
 27:36.600 --> 27:38.240 align:start position:0%
-writable executable memory and I think
+writable executable memory, and I think
 
 27:38.240 --> 27:39.960 align:start position:0%
 as of Sonoma you can't have readable
 
 27:39.960 --> 27:42.320 align:start position:0%
-executable memory um which is something
+executable memory, which is something
 
 27:42.320 --> 27:44.039 align:start position:0%
-I need to fix so this won't work on
+I need to fix. So this won't work on
 
 27:44.039 --> 27:46.120 align:start position:0%
-somoma because currently the memory is
+Somoma because currently the memory is
 
 27:46.120 --> 27:47.799 align:start position:0%
-read execute but that's on my list of
+read-execute, but that's on my list of
 
-27:47.799 --> 27:51.559 align:start position:0%
-things to fix like do we need to like to
+27:47.799 --> 27:49.200
+things to fix.
+
+27:49.200 --> 27:51.559
+[Unknown] Do we need to, like, to
 
 27:51.559 --> 27:53.960 align:start position:0%
 change like the way we need to release
 
 27:53.960 --> 27:56.120 align:start position:0%
-this for like I I recall that there's a
+this for macOS? I recall that there's a
 
 27:56.120 --> 27:58.159 align:start position:0%
-way to ask for it
+way to ask for it, ...
 
 27:58.159 --> 28:01.320 align:start position:0%
-say when you map the memory you ask for
+[Brandt] When you map the memory, you ask for
 
 28:01.320 --> 28:05.720 align:start position:0%
-the jit uh in the flags when you map the
+the JIT... In the flags when you mmap the
 
 28:05.720 --> 28:08.600 align:start position:0%
-memory you can say map jit I think yeah
+memory, you can say mmap JIT, I think,
 
 28:08.600 --> 28:11.640 align:start position:0%
-yeah and that says I'm AIT I I think you
+and that says I'm a JIT. [Unknown] I think you
 
 28:11.640 --> 28:13.080 align:start position:0%
 may be referring to platform
@@ -2120,179 +2147,194 @@ may be referring to platform
 28:13.080 --> 28:14.679 align:start position:0%
 restrictions where you need to actually
 
-28:14.679 --> 28:17.399 align:start position:0%
-set the exe up speci before you even run
+28:14.679 --> 28:16.550
+set the executable up specially
 
-28:17.399 --> 28:21.440 align:start position:0%
-it let me let me ref so when we the
+28:16.550 --> 28:17.500
+before you even run it.
 
-28:21.440 --> 28:24.080 align:start position:0%
-mic because I supp one that you compile
+28:17.500 --> 28:19.800 align:start position:0%
+[Pablo] Let me rephrase: So when we
 
-28:24.080 --> 28:28.399 align:start position:0%
-is the same you compile right we need to
+28:19.800 --> 28:21.940
+build the macOS binary, 
+
+28:22.500 --> 28:24.500
+because I suppose for the one that you compile is
+
+28:24.700 --> 28:28.399 align:start position:0%
+the same you compile yourself (yes),
 
 28:28.399 --> 28:30.840 align:start position:0%
-like do you know if we need to set
+like, do you know if we need to set
 
-28:30.840 --> 28:33.480 align:start position:0%
-anything or ask if we do I don't know
+28:30.840 --> 28:32.160
+anything or ask Apple...
+
+28:32.160 --> 28:33.480
+[Brandt] If we do I don't know
 
 28:33.480 --> 28:35.120 align:start position:0%
-that we need to I'm not familiar with
+that we need to, I'm not familiar with
 
 28:35.120 --> 28:37.519 align:start position:0%
-how we're actually building Mac OS
+how we're actually building macOS
 
 28:37.519 --> 28:39.760 align:start position:0%
 releases differently from how I just
 
 28:39.760 --> 28:41.880 align:start position:0%
-build it locally um I can vouch for it
+build it locally. I can vouch for it
 
-28:41.880 --> 28:44.080 align:start position:0%
-working
+28:41.880 --> 28:43.500 align:start position:0%
+working locally.
 
-28:44.080 --> 28:47.240 align:start position:0%
-locally presumably the the release
+28:44.850 --> 28:47.240 align:start position:0%
+[Unknown] Presumably the the release
 
-28:47.240 --> 28:50.279 align:start position:0%
-manager needs to use that flag yes if
+28:47.240 --> 28:49.300 align:start position:0%
+manager needs to use that flag?
 
-28:50.279 --> 28:51.679 align:start position:0%
-there's anything that needs to be done
+28:49.700 --> 28:51.679 align:start position:0%
+[Brandt] Yes, there's anything that needs to be done,
 
 28:51.679 --> 28:53.279 align:start position:0%
 that sounds like the release manager
 
-28:53.279 --> 28:58.000 align:start position:0%
-should do it but I'm not aware of yeah
+28:53.279 --> 28:57.000 align:start position:0%
+should do it, but I'm not aware of, yeah...
 
-28:58.000 --> 29:00.960 align:start position:0%
-it it very well could be the most the
+28:58.000 --> 29:00.900 align:start position:0%
+It very well could be... The most,
 
-29:00.960 --> 29:03.279 align:start position:0%
-most of the sort of permissions stuff
+29:00.900 --> 29:03.279 align:start position:0%
+Most of the sort of permissions stuff
 
 29:03.279 --> 29:05.519 align:start position:0%
-I've had to debug has been on Mac OS
+I've had to debug has been on macOS
 
-29:05.519 --> 29:08.320 align:start position:0%
-specifically M1 Mac
+29:05.519 --> 29:08.300 align:start position:0%
+specifically M1 Mac. Yeah.
 
-29:08.320 --> 29:10.880 align:start position:0%
-yeah so it sounds like the Run
+29:09.200 --> 29:10.880 align:start position:0%
+[Sam] So it sounds like the runtime
 
 29:10.880 --> 29:13.000 align:start position:0%
-generation is super fast yes why not
+code generation is super fast. (Yes). Why not
 
 29:13.000 --> 29:17.000 align:start position:0%
-just do this either for like tier one or
+just do this, either, for like, tier-1, or
 
-29:17.000 --> 29:21.039 align:start position:0%
-I what number starts at interpret why
+29:17.000 --> 29:20.700 align:start position:0%
+I forget what number it starts at, interpreter...
 
-29:21.039 --> 29:23.360 align:start position:0%
-only do this for tier two well we don't
+29:20.700 --> 29:22.600
+Why only do this for tier-2?
 
-29:23.360 --> 29:24.360 align:start position:0%
-definitely don't want to do it for
+29:22.600 --> 29:23.500
+[Brandt] Well we definitely
+
+29:23.500 --> 29:24.360 align:start position:0%
+don't want to do it for
 
 29:24.360 --> 29:26.720 align:start position:0%
-unspecialized bik code right because the
+unspecialized byte-code, right, because the
 
 29:26.720 --> 29:28.519 align:start position:0%
-specialized B code is uh where we're
+specialized byte-code is, uh, where we're
 
 29:28.519 --> 29:29.919 align:start position:0%
 able to actually generate high quality
 
 29:29.919 --> 29:32.080 align:start position:0%
-code for um and the reason that we want
+code for, um, and the reason that we want
 
 29:32.080 --> 29:33.960 align:start position:0%
-to break it up into tier 2 code is
+to break it up into tier-2 code is
 
 29:33.960 --> 29:36.039 align:start position:0%
 because just by breaking it up we're not
 
-29:36.039 --> 29:38.200 align:start position:0%
-actually gaining anything right um if
+29:36.039 --> 29:38.000 align:start position:0%
+actually gaining anything, right?
 
-29:38.200 --> 29:39.519 align:start position:0%
-anything we're losing something because
+29:38.000 --> 29:39.519 align:start position:0%
+If anything we're losing something because
 
 29:39.519 --> 29:42.600 align:start position:0%
-lvm is able to optimize less over the
+LLVM is able to optimize less over the
 
 29:42.600 --> 29:47.559 align:start position:0%
-same context um but uh the kind of
+same context. But the kind of
 
 29:47.559 --> 29:49.399 align:start position:0%
-reason to build this on top of tier two
+reason to build this on top of tier-2
 
 29:49.399 --> 29:51.080 align:start position:0%
 is because ideally we're going to
 
 29:51.080 --> 29:52.960 align:start position:0%
-optimiz here to and Ken Jen will talk a
+optimize here too, and Ken Jin will talk a
 
 29:52.960 --> 29:54.679 align:start position:0%
-little bit more about that um but if
+little bit more about that. But if
 
 29:54.679 --> 29:56.960 align:start position:0%
 we're able to remove guards or reorder
 
 29:56.960 --> 29:59.880 align:start position:0%
-things or hoist guards or whatever um
+things or hoist guards or whatever,
 
-29:59.880 --> 30:02.039 align:start position:0%
-then this Builds on top of that um and
+29:59.880 --> 30:01.950 align:start position:0%
+then this builds on top of that,
 
-30:02.039 --> 30:03.399 align:start position:0%
-so those guards won't be present in the
+30:01.950 --> 30:03.200 align:start position:0%
+and so those guards won't be present
 
-30:03.399 --> 30:05.919 align:start position:0%
-generated machine code I get all that
+30:03.200 --> 30:04.600
+in the generated machine code.
 
-30:05.919 --> 30:07.360 align:start position:0%
-but like so the examples you're talking
+30:05.000 --> 30:06.050
+[Sam] I get all that,
+
+30:06.050 --> 30:07.350 align:start position:0%
+but like, so the examples you're talking
 
 30:07.360 --> 30:09.080 align:start position:0%
 about that are already using this are
 
 30:09.080 --> 30:10.960 align:start position:0%
-using this for their Baseline right
+using this for their baseline, right,
 
 30:10.960 --> 30:12.399 align:start position:0%
 they're using this before any
 
 30:12.399 --> 30:15.080 align:start position:0%
-optimizations yes so wouldn't this be
+optimizations. (Yes.) So wouldn't this be
 
-30:15.080 --> 30:17.760 align:start position:0%
-advantageous in the same use case for
+30:15.080 --> 30:18.100 align:start position:0%
+advantageous in the same use case for Python?
 
-30:17.760 --> 30:21.720 align:start position:0%
-python it could be I haven't tried
+30:18.300 --> 30:21.000 align:start position:0%
+[Brandt] It could be, I haven't tried it.
 
-30:21.720 --> 30:25.480 align:start position:0%
-it we we currently can't translate every
+30:22.500 --> 30:25.450 align:start position:0%
+[Unknown] We currently can't translate every
 
 30:25.480 --> 30:28.279 align:start position:0%
-tier one by code corresonding sequence
+tier-1 byte-code into a corresonding sequence
 
 30:28.279 --> 30:31.240 align:start position:0%
-of tier two by codes although we have
+of tier two by codes. [Brandt] Although we have...
 
-30:31.240 --> 30:33.799 align:start position:0%
-translate every tier one by code to copy
+30:31.240 --> 30:33.000 align:start position:0%
+[Sam] Do you translate every tier-1 byte-code
 
-30:33.799 --> 30:35.799 align:start position:0%
-and Patch no
+30:33.000 --> 30:35.799 align:start position:0%
+to copy-and-patch? [Brandt] No.
 
 30:35.799 --> 30:37.840 align:start position:0%
-because needs to
+No, because needs to
 
 30:37.840 --> 30:43.360 align:start position:0%
 be simp we we we could it would just be
