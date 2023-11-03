@@ -2333,17 +2333,26 @@ of tier two by codes. [Brandt] Although we have...
 30:33.000 --> 30:35.799 align:start position:0%
 to copy-and-patch? [Brandt] No.
 
-30:35.799 --> 30:37.840 align:start position:0%
-No, because needs to
+30:35.799 --> 30:37.800 align:start position:0%
+No, because [???]'s input needs to be tier-2...
 
-30:37.840 --> 30:43.360 align:start position:0%
-be simp we we we could it would just be
+30:37.800 --> 30:39.800 align:start position:0%
+[unclear speaking]
 
-30:43.360 --> 30:45.399 align:start position:0%
-different
+30:40.000 --> 30:44.500 align:start position:0%
+We could, it would just be different. Yeah.
 
-30:45.399 --> 30:55.840 align:start position:0%
+30:44.500 --> 30:46.100
+[Unknown] Can I try explaining this?
 
+30:46.500 --> 30:47.500
+[Brandt] Yeah, go ahead.
+
+30:47.700 --> 30:49.100
+[Unknown] It's specializaion.
+
+30:49.300 --> 30:55.840
+[unclear speaking]
 
 30:55.840 --> 30:58.120 align:start position:0%
 ahead although have and we want
@@ -2351,62 +2360,65 @@ ahead although have and we want
 30:58.120 --> 31:00.039 align:start position:0%
 effective profiling that gives us as
 
-31:00.039 --> 31:01.720 align:start position:0%
-well so theer
+31:00.039 --> 31:02.600 align:start position:0%
+well, so, tier-1 stuff
 
-31:01.720 --> 31:04.120 align:start position:0%
-oneu because we're effectively
+31:02.600 --> 31:04.120 align:start position:0%
+because we're effectively
 
-31:04.120 --> 31:17.960 align:start position:0%
+31:04.120 --> 31:06.800
+specializing very quickly and dynamically
 
+31:07.000 --> 31:26.159
+we can... [unclear speaking]
 
-31:17.960 --> 31:26.159 align:start position:0%
-
-
-31:26.159 --> 31:28.519 align:start position:0%
-probably another thing too I I realized
+31:27.000 --> 31:28.519 align:start position:0%
+Another thing too, I realized
 
 31:28.519 --> 31:31.039 align:start position:0%
-I didn't mention um the reason that the
+I didn't mention: The reason that the
 
 31:31.039 --> 31:32.760 align:start position:0%
 generated code is such high quality is
 
 31:32.760 --> 31:35.399 align:start position:0%
-because we don't care about uh like the
+because we don't care about the
 
 31:35.399 --> 31:36.720 align:start position:0%
-compil times when we're actually
+compile times when we're actually
 
 31:36.720 --> 31:38.279 align:start position:0%
 building this thing so we pull out all
 
 31:38.279 --> 31:39.960 align:start position:0%
-the stops and tell lvm to optimize
+the stops and tell LLVM to optimize
 
 31:39.960 --> 31:41.320 align:start position:0%
-heavily um which is something you
+heavily, which is something you
 
-31:41.320 --> 31:43.960 align:start position:0%
-wouldn't want to do in a RI time jit yes
+31:41.320 --> 31:43.950 align:start position:0%
+wouldn't want to do in a real-time JIT. Yes?
 
-31:43.960 --> 31:46.639 align:start position:0%
-when youate the machine
+31:43.950 --> 31:46.639 align:start position:0%
+[Unknown] When you generate the machine
 
-31:46.639 --> 31:51.960 align:start position:0%
+31:46.639 --> 31:50.500 align:start position:0%
 code can you pass the equivalent to
 
-31:51.960 --> 31:54.919 align:start position:0%
-compile we're using
+31:51.960 --> 31:54.500 align:start position:0%
+compiler flags? [Brandt] Yeah. We're using clang.
 
-31:54.919 --> 32:00.240 align:start position:0%
-clim yes yeah so uh we uh compile first
+31:54.700 --> 31:55.700
+[Unkown] [unclear speaking]
+
+31:55.700 --> 32:00.200
+[Brandt] Yes. Yeah. So we compile first
 
 32:00.240 --> 32:02.559 align:start position:0%
 using clang and that turns C code into
 
 32:02.559 --> 32:06.080 align:start position:0%
-llvm uh textual IR um the only reason we
+LLVM textual IR. The only reason we
 
 32:06.080 --> 32:07.519 align:start position:0%
 do that is because we want to fix up the
@@ -2418,97 +2430,97 @@ calling convention and clang doesn't
 actually let let us have this calling
 
 32:10.880 --> 32:12.880 align:start position:0%
-convention from C so we fix up the
+convention from C. So we fix up the
 
 32:12.880 --> 32:15.720 align:start position:0%
-calling convention using a hacky Rex
+calling convention using a hacky regex
 
-32:15.720 --> 32:17.639 align:start position:0%
-replacement that will change in the
+32:15.720 --> 32:18.300 align:start position:0%
+replacement that we'll change in the future.
 
-32:17.639 --> 32:21.120 align:start position:0%
-future um and uh and then compile again
+32:20.000 --> 32:22.400 align:start position:0%
+And then compile again to the ELF.
 
-32:21.120 --> 32:24.240 align:start position:0%
+32:25.100 --> 32:27.720 align:start position:0%
+[Carol] And you said it was under your org?
 
+32:27.720 --> 32:29.350 align:start position:0%
+[Brandt] Yeah, yeah. So my user, Brandt Bucher,
 
-32:24.240 --> 32:27.720 align:start position:0%
-elf and you said it was under your or
+32:29.350 --> 32:31.200 align:start position:0%
+it's on my fork of CPython.
 
-32:27.720 --> 32:29.399 align:start position:0%
-yeah yeah so my user brand Booker it's
+32:31.200 --> 32:32.500 align:start position:0%
+[Carol] Oh, it's on the fork of CPython.
 
-32:29.399 --> 32:31.519 align:start position:0%
-on my fory python the brand it's on the
+32:32.500 --> 32:34.500 align:start position:0%
+(Yes.) [Unknown] Show the URL again. (Yes.)
 
-32:31.519 --> 32:36.840 align:start position:0%
+32:37.750 --> 32:40.195
+[Brandt] That's the URL.
 
+32:40.195 --> 32:43.000
+So it's the "justin" branch of brandtbucher/cpython
 
-32:36.840 --> 32:38.840 align:start position:0%
-yes uh that's the
-
-32:38.840 --> 32:42.639 align:start position:0%
-URL so it's the Justin branch of Bry P
-
-32:42.639 --> 32:46.080 align:start position:0%
-that's if you go to uh tools jit there's
+32:43.000 --> 32:46.080 align:start position:0%
+And if you go to tools/jit, there's
 
 32:46.080 --> 32:47.399 align:start position:0%
-a read me in there that says how to
+a README in there that says how to
 
-32:47.399 --> 32:49.480 align:start position:0%
-install lvm
+32:47.399 --> 32:49.500 align:start position:0%
+install LLVM. [Carol] Sweet.
 
-32:49.480 --> 32:51.880 align:start position:0%
-sweet it's one a question of the general
+32:50.600 --> 32:51.880 align:start position:0%
+[Antonio] It's more a question of the general
 
 32:51.880 --> 32:53.600 align:start position:0%
-approach than the what you need so far
+approach, than the what you did so far.
 
 32:53.600 --> 32:55.480 align:start position:0%
-but once you have a line of tra and you
+But once you have a [???] trace and you
 
 32:55.480 --> 32:57.919 align:start position:0%
-can have individual with this function
+can have individual calls with this function
 
 32:57.919 --> 33:00.519 align:start position:0%
-another obvious things to try is to put
+another obvious thing to try is to put
 
 33:00.519 --> 33:02.799 align:start position:0%
-all these calls into a cile compile it
+all these calls into a C file, compile it
 
 33:02.799 --> 33:05.039 align:start position:0%
-all together and see what happens yeah
+all together, and see what happens. (Yeah.)
 
 33:05.039 --> 33:07.639 align:start position:0%
-have you tried uh no but one thing the
+Have you tried? [Brandt] No, but one thing the
 
 33:07.639 --> 33:09.399 align:start position:0%
 paper did have good success with is
 
 33:09.399 --> 33:11.360 align:start position:0%
-actually compiling super instructions uh
+actually compiling super-instructions
 
 33:11.360 --> 33:14.480 align:start position:0%
-for common pairs or triples because then
+of common pairs or triples, because then
 
 33:14.480 --> 33:17.440 align:start position:0%
-it really allows lbm to optimize across
+it really allows LLVM to optimize across...
 
 33:17.440 --> 33:19.559 align:start position:0%
-um especially for for example like
+Especially for for example, like,
 
 33:19.559 --> 33:21.000 align:start position:0%
 obvious things that we may want to look
 
 33:21.000 --> 33:25.639 align:start position:0%
-at are um when we so the Micro Ops are
+at are, when we, so the micro-ops are
 
 33:25.639 --> 33:27.639 align:start position:0%
 kind of expanded from a single
 
 33:27.639 --> 33:30.039 align:start position:0%
-instruction um I would imagine that in
+instruction, I would imagine that in
 
 33:30.039 --> 33:32.080 align:start position:0%
 many cases we aren't able to optimize
@@ -2520,172 +2532,175 @@ that very heavily and so it ends up
 being the equivalent of the original
 
 33:34.600 --> 33:35.799 align:start position:0%
-instruction so that'd be sort of low
+instruction. So that'd be sort of low-
 
 33:35.799 --> 33:37.279 align:start position:0%
 hanging fruit for things that we could
 
 33:37.279 --> 33:39.600 align:start position:0%
-compile and again when we're just
+compile and, again, when we're just
 
 33:39.600 --> 33:42.039 align:start position:0%
 walking over we can window over and see
 
 33:42.039 --> 33:45.320 align:start position:0%
-if we have anything that's entire
+if we have anything that's...
 
-33:45.320 --> 33:47.880 align:start position:0%
-X involve the compiler
+33:45.320 --> 33:48.000 align:start position:0%
+[Unknown] [???] really involve the compiler and...
 
-33:47.880 --> 33:52.200 align:start position:0%
-and exactly and and right now we have um
+33:48.800 --> 33:52.150 align:start position:0%
+[Brandt] Exactly and and right now we have,
 
 33:52.200 --> 33:56.559 align:start position:0%
-like we have one uh template for every
+like, we have, one template for every
 
 33:56.559 --> 33:59.360 align:start position:0%
-uh micro op so like 200 some odd
+micro-op, so like 200-some odd
 
 33:59.360 --> 34:01.639 align:start position:0%
-templates um in the paper they generated
+templates. In the paper they generated
 
-34:01.639 --> 34:04.720 align:start position:0%
-as many as like 10,000 um combinations
+34:01.639 --> 34:05.100 align:start position:0%
+as many as like 10,000 (combinations) Yes.
 
-34:04.720 --> 34:06.960 align:start position:0%
-yes not only for combinations but also
+34:05.100 --> 34:06.960 align:start position:0%
+Not only for combinations but also,
 
 34:06.960 --> 34:09.320 align:start position:0%
-like for example if you have uh some
+like, for example, if you have some
 
 34:09.320 --> 34:12.560 align:start position:0%
-instructions for example um CH the
+instructions, for example, the
 
 34:12.560 --> 34:14.159 align:start position:0%
 control flow changes based on the value
 
 34:14.159 --> 34:16.919 align:start position:0%
-of the opar so it may make sense to
+of the op-arg, so it may make sense to
 
 34:16.919 --> 34:19.560 align:start position:0%
-actually burn in values of the opar not
+actually burn in values of the op-arg, not
 
 34:19.560 --> 34:22.040 align:start position:0%
-actually at jit time but ahead of time
+actually at JIT time, but ahead of time
 
 34:22.040 --> 34:23.760 align:start position:0%
-where you hard code those values and LM
+where you hard code those values and LLVM
 
 34:23.760 --> 34:25.480 align:start position:0%
-can optimize based on them and the op AR
+can optimize based on them and the op-arg
 
 34:25.480 --> 34:28.159 align:start position:0%
-is completely removed um then there's
+is completely removed. Then there's
 
 34:28.159 --> 34:29.760 align:start position:0%
-also super instructions and there
+also super-instructions, and there
 
 34:29.760 --> 34:31.760 align:start position:0%
-there's all sorts of games you can play
+there's all sorts of games you can play.
 
 34:31.760 --> 34:33.359 align:start position:0%
-um another example would be if you're
+Another example would be if you're
 
 34:33.359 --> 34:35.960 align:start position:0%
-lifting things from uh stack items into
+lifting things from stack items into
 
 34:35.960 --> 34:39.399 align:start position:0%
-registers um if you are kind of keeping
+registers, if you are kind of keeping
 
 34:39.399 --> 34:41.359 align:start position:0%
-that mapping of Stack items to registers
+that mapping of sstack items to registers,
 
 34:41.359 --> 34:42.760 align:start position:0%
 you may want to compile variants for
 
 34:42.760 --> 34:44.560 align:start position:0%
-different stack sizes um so that you
+different stack sizes, so that you
 
 34:44.560 --> 34:47.240 align:start position:0%
-have a finite number of uh mappings but
+have a finite number of mappings but
 
-34:47.240 --> 34:52.000 align:start position:0%
+34:47.240 --> 34:51.000 align:start position:0%
+you're able to keep things relatively simple.
 
+34:53.000 --> 34:54.000
+Victor again.
 
-34:52.000 --> 34:55.879 align:start position:0%
-simple Victor again so what is your
+34:54.400 --> 34:56.300
+[Victor] So what is your proposal?
 
-34:55.879 --> 34:58.760 align:start position:0%
-proposal do you want to to match or do
+34:56.300 --> 34:58.760 align:start position:0%
+Do you want to to merge, or do
 
 34:58.760 --> 35:02.599 align:start position:0%
+you want to maintain it outside Python for now?
 
-
-35:02.599 --> 35:04.920 align:start position:0%
-mainside uh I I didn't really have a
+35:03.800 --> 35:04.920 align:start position:0%
+[Brandt] I didn't really have a
 
 35:04.920 --> 35:08.040 align:start position:0%
-proposal today but basically if this is
+proposal today, but basically if this is
 
 35:08.040 --> 35:09.720 align:start position:0%
 something people would like to see in
 
 35:09.720 --> 35:12.560 align:start position:0%
-main off by default um we can get it in
+main, off by default, we can get it in
 
 35:12.560 --> 35:14.560 align:start position:0%
-main very easily I know we aren't crazy
+main very easily. I know we aren't crazy
 
 35:14.560 --> 35:16.079 align:start position:0%
-about experiments in Maine which is kind
+about experiments in main, which is kind
 
-35:16.079 --> 35:18.520 align:start position:0%
-of why I'm floating the idea now if not
+35:16.079 --> 35:18.200 align:start position:0%
+of why I'm floating the idea now.
 
-35:18.520 --> 35:19.880 align:start position:0%
-uh this has been a long live Branch
+35:18.200 --> 35:19.880 align:start position:0%
+If not, this has been a long-lived branch
 
 35:19.880 --> 35:24.160 align:start position:0%
-since like May um and so if if if it's
+since like May, and so, if it's
 
 35:24.160 --> 35:25.960 align:start position:0%
-any Testament to like how easy it is to
+any testament to like how easy it is to
 
 35:25.960 --> 35:27.880 align:start position:0%
-maintain this stuff a lot of stuff has
+maintain this stuff, a lot of stuff has
 
 35:27.880 --> 35:30.599 align:start position:0%
-landed in Maine since May and uh keeping
+landed in maine since May, and keeping
 
 35:30.599 --> 35:32.560 align:start position:0%
-this Branch up to date and improving
+this branch up to date, and improving
 
-35:32.560 --> 35:34.520 align:start position:0%
-during that time has not been very
+35:32.560 --> 35:35.100 align:start position:0%
+during that time, has not been very difficult.
 
-35:34.520 --> 35:38.839 align:start position:0%
-difficult um Ken even borrowed uh he
+35:36.000 --> 35:38.839 align:start position:0%
+Ken even borrowed,
 
 35:38.839 --> 35:40.400 align:start position:0%
-basically merged this Branch into his
+he basically merged this branch into his
 
 35:40.400 --> 35:42.880 align:start position:0%
-own Branch a while back when he was uh
+own branch a while back when he was
 
 35:42.880 --> 35:45.160 align:start position:0%
-uh playing around with optimizing stuff
+playing around with optimizing stuff
 
 35:45.160 --> 35:46.599 align:start position:0%
 and wanted to see what would happen if
 
 35:46.599 --> 35:49.119 align:start position:0%
-he jitted it Ken is it easy to like add
+he JITted it. Ken, is it easy to, like, add
 
 35:49.119 --> 35:51.520 align:start position:0%
-new bite codes and work with the jit as
+new byte-codes and work with the JIT as
 
 35:51.520 --> 35:56.000 align:start position:0%
-a like a API this is a r question about
+a, like, a API? this is a r question about
 
 35:56.000 --> 35:57.680 align:start position:0%
 yes
