@@ -3354,9 +3354,18 @@ to, kind of, discuss, so,
 what is the debugging situation of this code?
 
 44:24.800 --> 44:26.200
-For instance, one of the things ...
+For instance, one of the things
 
-44:26.500 --> 44:40.750
+44:26.200 --> 44:28.500
+I mentioned I was, uh, worried that
+
+44:28.500 --> 44:33.250
+if the JIT [???] any sort of way to tell the [???] 
+
+44:33.250 --> 44:36.500
+that, hey, the way you are going through me,
+
+44:36.500 --> 44:40.750
 [???]
 
 44:41.550 --> 44:44.559 align:start position:0%
@@ -3566,20 +3575,29 @@ reusable then it sounds like we have a
 47:21.440 --> 47:22.920 align:start position:0%
 promising path forward for a good
 
-47:22.920 --> 47:24.720 align:start position:0%
+47:22.920 --> 47:25.000 align:start position:0%
 debugging experience.
 
-47:24.720 --> 47:34.359
-[Greg] [???]
+47:26.300 --> 47:28.100
+[Greg] Other JITs like [???] has dealt with
 
-47:34.359 --> 47:36.250
+47:28.100 --> 47:29.400
+a lot of this stuff in the past,
+
+47:29.400 --> 47:31.000
+so there's a lot of things we could lean on
+
+47:31.000 --> 47:33.500
+for how they have debugging work.
+
+47:34.700 --> 47:36.350
 [Brandt] Oh, I didn't see...
 
-47:36.250 --> 47:37.500
-[Unknown] I think we're getting too 
+47:36.350 --> 47:37.800
+[Unknown] I think we're getting too much
 
-47:37.500 --> 47:40.450 align:start position:0%
-much into implementation details.
+47:37.800 --> 47:40.450 align:start position:0%
+into implementation details.
 
 47:40.450 --> 47:43.600
 [Brandt] I'll be here all week!
