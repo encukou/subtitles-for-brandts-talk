@@ -3192,7 +3192,7 @@ presentation a few months ago as well.
 [Brandt] Was that for the paper? [Carol] Good slides.
 
 42:17.200 --> 42:19.250 align:start position:0%
-[Unknown] Just as an FYI,
+[Greg] Just as an FYI,
 
 42:19.250 --> 42:21.400 align:start position:0%
 like, that may be a new paper, but we
@@ -3216,13 +3216,13 @@ are very fast to JIT.
 [Brandt] Yeah, how was your experience with it?
 
 42:33.000 --> 42:34.500
-[Unknown] I mean, we shipped it in a product.
+[Greg] I mean, we shipped it in a product.
 
 42:34.500 --> 42:36.200
 [Brandt] Okay, let's ship it in a product!
 
 42:36.200 --> 42:40.800
-[Unknown] It was like [???]
+[Greg] It was like [???]
 
 42:41.000 --> 42:43.359 align:start position:0%
 [Brandt] Yeah, I mean it is, I kind of
@@ -3401,17 +3401,17 @@ harvest, otherwise we would have to
 45:02.280 --> 45:03.600
 kind of emit it ourselves.
 
-45:03.600 --> 45:04.920
-[Pablo] [???]
+45:03.600 --> 45:06.000
+[Pablo] Any one cheap way would be, maybe to,
 
-45:04.920 --> 45:07.440 align:start position:0%
-be maybe to, maybe at the beginning when,
+45:06.000 --> 45:08.200 align:start position:0%
+maybe at the beginning when, I mean,
 
-45:07.440 --> 45:10.040 align:start position:0%
-I mean, at the beginning maybe when we are
+45:08.200 --> 45:10.500 align:start position:0%
+at the beginning when we are playing
 
-45:10.040 --> 45:12.760 align:start position:0%
-playing with it, maybe achieve ways to allow
+45:10.500 --> 45:12.760 align:start position:0%
+with it, maybe achieve ways to allow
 
 45:12.760 --> 45:15.359 align:start position:0%
 at least, to or detect if you're building
@@ -3422,16 +3422,16 @@ Python itself with frame pointers and
 45:17.040 --> 45:18.800 align:start position:0%
 then generating the template with frame
 
-45:18.800 --> 45:20.900
+45:18.800 --> 45:21.200
 pointers (yeah) I assume you are going to copy
 
-45:20.900 --> 45:22.750
-[???]
+45:21.200 --> 45:22.800
+[???], right?
 
-45:22.750 --> 45:24.000 align:start position:0%
+45:22.800 --> 45:24.100 align:start position:0%
 [Brandt] Yeah, so we're disabling frame
 
-45:24.000 --> 45:25.400 align:start position:0%
+45:24.100 --> 45:25.400 align:start position:0%
 pointers right now, just because we're
 
 45:25.400 --> 45:26.960 align:start position:0%
