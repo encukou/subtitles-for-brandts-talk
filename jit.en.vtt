@@ -948,7 +948,7 @@ here are some numbers from the paper
 compared to a WebAssembly baseline
 
 12:12.360 --> 12:14.680 align:start position:0%
-compiler. Copy-and-Patch has five
+compiler. Copy-and-patch has five
 
 12:14.680 --> 12:17.160 align:start position:0%
 times faster code generation and 50%
@@ -987,7 +987,7 @@ compared to a full optimizing JIT with
 handwritten assembly, in this case LuaJIT,
 
 12:44.639 --> 12:47.560 align:start position:0%
-a Copy-and-Patch Lua
+a copy-and-patch Lua
 
 12:47.560 --> 12:49.920 align:start position:0%
 implementation is still faster on some
@@ -1086,7 +1086,7 @@ them. These are relocations for
 extern symbols.
 
 13:56.480 --> 13:58.959 align:start position:0%
-And this is how Copy-and-Patch
+And this is how copy-and-patch
 
 13:58.959 --> 14:03.519 align:start position:0%
 works. Basically, we will use LLVM
@@ -1332,7 +1332,7 @@ This is python code that handles
 actually extracting all the cases,
 
 17:09.039 --> 17:11.039 align:start position:0%
-compiling each one, parsing out the elf,
+compiling each one, parsing out the ELF,
 
 17:11.039 --> 17:13.799 align:start position:0%
 and then generating the header files.
@@ -1383,7 +1383,7 @@ and then walking over the relocations
 and just performing them. And then we
 
 17:47.840 --> 17:50.000 align:start position:0%
-have the 3,000 lines of simple generated
+have the 3_000 lines of simple generated
 
 17:50.000 --> 17:51.960 align:start position:0%
 C. And it truly is just as simple as the
@@ -1518,7 +1518,7 @@ actually just parse the JSON, which is
 beautiful. It also has a
 
 19:34.080 --> 19:36.559 align:start position:0%
-built-in disassembler, so the 3,000
+built-in disassembler, so the 3_000
 
 19:36.559 --> 19:38.559 align:start position:0%
 lines of header file is actually
@@ -1752,7 +1752,7 @@ implementation supports two platforms: It
 supports 32-bit Windows and 64-bit Windows.
 
 22:31.320 --> 22:33.840 align:start position:0%
-[Laughter] Micosoft!
+[Laughter] Microsoft!
 
 22:33.840 --> 22:36.120 align:start position:0%
 [Brandt] Just kidding. It supports all tier-1
@@ -1860,7 +1860,7 @@ supports GPU, so I, I'm not doing
 anything special. Yeah.
 
 24:02.460 --> 24:04.500
-[Unknown] So if they aren CPUs, the resources
+[Unknown] So if they aren't CPUs, the resources
 
 24:04.700 --> 24:05.800 align:start position:0%
 aren't in the right place, so it's...
@@ -1878,7 +1878,7 @@ like, hardware integration, we can just
 piggyback on LLVM. So if there's a way to
 
 24:14.559 --> 24:16.640 align:start position:0%
-make LLVM uh use the gpus more
+make LLVM uh use the GPUs more
 
 24:16.640 --> 24:18.360 align:start position:0%
 effectively then we can harness that too.
@@ -1890,7 +1890,7 @@ At least for that build. [Carol] Yes, okay.
 Victor? [Victor] The thing about container is
 
 24:25.550 --> 24:28.900
-it possible on Linux to generate the,
+it possible on Linux to generate
 
 24:29.100 --> 24:32.500
 the generated part for all platforms, from Linux?
@@ -1920,16 +1920,16 @@ and you can just build them all.
 run anything for this...
 
 24:48.000 --> 24:50.300 align:start position:0%
-[Unknown] He really wants to use a container. [Unknown] He does!
+[Guido] He really wants to use a container. [Unknown] He does!
 
 24:51.300 --> 24:54.000 align:start position:0%
-When you ask people to install LLVM,
+[Victor] When you ask people to install LLVM,
 
 24:54.000 --> 24:55.900 align:start position:0%
 they get different flavor,
 
 24:55.900 --> 24:59.000 align:start position:0%
-different [???], and the output can change,
+different flags, and the output can change,
 
 24:59.200 --> 25:01.880 align:start position:0%
 so maybe to configure it, put everything in
@@ -1950,16 +1950,16 @@ remember this also depends on configure
 flags, so it's only as stable as those.
 
 25:14.520 --> 25:17.720 align:start position:0%
-Also on top of that, I mean, I have test,
+Also on top of that,
 
 25:17.720 --> 25:20.200 align:start position:0%
 I do have CI running this on all the
 
 25:20.200 --> 25:21.800 align:start position:0%
-platforms I listed there,
+platforms I listed there, and
 
 25:24.000 --> 25:25.679 align:start position:0%
-it's also tested against the full Matrix of
+it's also tested against the full matrix of
 
 25:25.679 --> 25:28.799 align:start position:0%
 LLVM 14, 15, and 16, so for all three of
@@ -1995,7 +1995,7 @@ like this is working on a wide variety
 of things, it's just a matter of...
 
 25:54.000 --> 25:56.000
-... is pip installing LLVM, 
+... is installing LLVM
 
 25:56.000 --> 25:58.100 align:start position:0%
  problem for people building Python?
@@ -2034,13 +2034,13 @@ just for generating that one header file.
 you don't need LLVM, so it would be a new dependency?
 
 26:28.900 --> 26:31.000 align:start position:0%
-If, if you want to build the JIT, yes.
+[Brandt] If you want to build the JIT, yes.
 
 26:31.000 --> 26:32.919 align:start position:0%
 So I imagine this behind a configure
 
 26:32.919 --> 26:36.840 align:start position:0%
-flag, where, I mean, just, just,
+flag. Just,
 
 26:36.840 --> 26:39.760 align:start position:0%
 spitballing here: If you don't pass
@@ -2049,7 +2049,7 @@ spitballing here: If you don't pass
 the configure flag and you don't have
 
 26:41.080 --> 26:44.240 align:start position:0%
-LLVM installed, we don't do, we just do
+LLVM installed, we just do
 
 26:44.240 --> 26:47.080 align:start position:0%
 a normal build. If we smell that LLVM is
@@ -2058,10 +2058,10 @@ a normal build. If we smell that LLVM is
 nearby but you didn't pass the flag we
 
 26:48.640 --> 26:50.159 align:start position:0%
-can say: "Hey, by the way, you can build a
+can say: “Hey, by the way, you can build a
 
 26:50.159 --> 26:52.000 align:start position:0%
-JIT if you want to." And if you do pass
+JIT if you want to.” And if you do pass
 
 26:52.000 --> 26:54.600 align:start position:0%
 the flag then we build the JIT.
@@ -2073,13 +2073,13 @@ the flag then we build the JIT.
 seeing if you can make something
 
 27:00.100 --> 27:03.000
-work on other compilers...
+work on other compilers [???] and this
 
 27:03.000 --> 27:05.120
-... becomes a section of work for each compiler.
+[???] becomes a section of work for each compiler.
 
 27:05.120 --> 27:09.000 align:start position:0%
-[Unknown] Just that making that configure
+[Russell] Making that configure
 
 27:09.000 --> 27:11.000 align:start position:0%
 flag an optional thing is pretty much
@@ -2100,22 +2100,22 @@ absolutely can't build for.
 Uh, Pablo, sorry, I should say names.
 
 27:23.640 --> 27:25.650 align:start position:0%
-[Pablo] Do you need any special, like,
+[Pablo] Do you need any special,
 
 27:25.650 --> 27:27.200 align:start position:0%
-magic thingies for macOS, like,
+magic thingies for macOS?
 
 27:27.300 --> 27:29.300
 I recall that it has some protections,
 
 27:29.300 --> 27:31.550
-and it's like, ...
+and this is random executable memory
 
 27:31.520 --> 27:35.120 align:start position:0%
 [Brandt] This is, I mean, JITs work on macOS,
 
 27:35.120 --> 27:36.600 align:start position:0%
-so you can't have, you can't have
+so you can't have
 
 27:36.600 --> 27:38.240 align:start position:0%
 writable executable memory, and I think
@@ -2133,22 +2133,22 @@ I need to fix. So this won't work on
 Somoma because currently the memory is
 
 27:46.120 --> 27:47.799 align:start position:0%
-read-execute, but that's on my list of
+read+execute, but that's on my list of
 
 27:47.799 --> 27:49.200
 things to fix.
 
 27:49.200 --> 27:51.559
-[Unknown] Do we need to, like, to
+[Pablo] Do we need to
 
 27:51.559 --> 27:53.960 align:start position:0%
-change like the way we need to release
+change the way we need to release
 
 27:53.960 --> 27:56.120 align:start position:0%
 this for macOS? I recall that there's a
 
 27:56.120 --> 27:58.159 align:start position:0%
-way to ask for it, ...
+way to ask for it, to say...
 
 27:58.159 --> 28:01.320 align:start position:0%
 [Brandt] When you map the memory, you ask for
@@ -2157,7 +2157,7 @@ way to ask for it, ...
 the JIT... In the flags when you mmap the
 
 28:05.720 --> 28:08.600 align:start position:0%
-memory, you can say mmap JIT, I think,
+memory, you can say MAP_JIT, I think,
 
 28:08.600 --> 28:11.640 align:start position:0%
 and that says I'm a JIT. [Unknown] I think you
@@ -2178,7 +2178,7 @@ before you even run it.
 [Pablo] Let me rephrase: So when we
 
 28:19.800 --> 28:21.940
-build the macOS binary, 
+build the macOS binary as the release team, 
 
 28:22.500 --> 28:24.500
 because I suppose for the one that you compile is
@@ -2187,10 +2187,10 @@ because I suppose for the one that you compile is
 the same you compile yourself (yes),
 
 28:28.399 --> 28:30.840 align:start position:0%
-like, do you know if we need to set
+do you know if we need to set
 
 28:30.840 --> 28:32.160
-anything or ask Apple...
+anything or ask Apple for permission...
 
 28:32.160 --> 28:33.480
 [Brandt] If we do I don't know
@@ -2211,7 +2211,7 @@ build it locally. I can vouch for it
 working locally.
 
 28:44.850 --> 28:47.240 align:start position:0%
-[Unknown] Presumably the the release
+[Guido] Presumably the the release
 
 28:47.240 --> 28:49.300 align:start position:0%
 manager needs to use that flag?
@@ -2226,16 +2226,16 @@ that sounds like the release manager
 should do it, but I'm not aware of, yeah...
 
 28:58.000 --> 29:00.900 align:start position:0%
-It very well could be... The most,
+It very well could be... Most
 
 29:00.900 --> 29:03.279 align:start position:0%
-Most of the sort of permissions stuff
+of the permissions stuff
 
 29:03.279 --> 29:05.519 align:start position:0%
-I've had to debug has been on macOS
+I've had to debug has been on macOS,
 
 29:05.519 --> 29:08.300 align:start position:0%
-specifically M1 Mac. Yeah.
+specifically M1 Mac.
 
 29:09.200 --> 29:10.880 align:start position:0%
 [Sam] So it sounds like the runtime
@@ -2244,13 +2244,13 @@ specifically M1 Mac. Yeah.
 code generation is super fast. (Yes). Why not
 
 29:13.000 --> 29:17.000 align:start position:0%
-just do this, either, for like, tier-1, or
+just do this for the Tier 1, or
 
 29:17.000 --> 29:20.700 align:start position:0%
-I forget what number it starts at, interpreter...
+I forget what number it starts at, interpreter?
 
 29:20.700 --> 29:22.600
-Why only do this for tier-2?
+Why only do this for Tier 2?
 
 29:22.600 --> 29:23.500
 [Brandt] Well we definitely
@@ -2259,19 +2259,19 @@ Why only do this for tier-2?
 don't want to do it for
 
 29:24.360 --> 29:26.720 align:start position:0%
-unspecialized byte-code, right, because the
+unspecialized bytecode, because the
 
 29:26.720 --> 29:28.519 align:start position:0%
-specialized byte-code is, uh, where we're
+specialized bytecode is where we're
 
 29:28.519 --> 29:29.919 align:start position:0%
 able to actually generate high quality
 
 29:29.919 --> 29:32.080 align:start position:0%
-code for, um, and the reason that we want
+code for. And the reason that we want
 
 29:32.080 --> 29:33.960 align:start position:0%
-to break it up into tier-2 code is
+to break it up the Tier 2 code is
 
 29:33.960 --> 29:36.039 align:start position:0%
 because just by breaking it up we're not
@@ -2286,10 +2286,10 @@ If anything we're losing something because
 LLVM is able to optimize less over the
 
 29:42.600 --> 29:47.559 align:start position:0%
-same context. But the kind of
+same context. But the
 
 29:47.559 --> 29:49.399 align:start position:0%
-reason to build this on top of tier-2
+reason to build this on top of Tier 2
 
 29:49.399 --> 29:51.080 align:start position:0%
 is because ideally we're going to
@@ -2340,49 +2340,49 @@ advantageous in the same use case for Python?
 [Brandt] It could be, I haven't tried it.
 
 30:22.500 --> 30:25.450 align:start position:0%
-[Unknown] We currently can't translate every
+[Guido] We currently can't translate every
 
 30:25.480 --> 30:28.279 align:start position:0%
-tier-1 byte-code into a corresonding sequence
+Tier 1 bytecode into a corresonding sequence
 
 30:28.279 --> 30:31.240 align:start position:0%
-of tier two by codes. [Brandt] Although we have...
+of Tier 2 bytecodes. [Brandt] Although we have...
 
 30:31.240 --> 30:33.000 align:start position:0%
-[Sam] Do you translate every tier-1 byte-code
+[Sam] Do you translate every Tier 1 bytecode
 
 30:33.000 --> 30:35.799 align:start position:0%
 to copy-and-patch? [Brandt] No.
 
 30:35.799 --> 30:37.800 align:start position:0%
-No, because [???]'s input needs to be tier-2...
+[Guido] No, because its input needs to be Tier 2
 
 30:37.800 --> 30:39.800 align:start position:0%
-[???]
+bytecode which is much simpler than Tier 1...
 
 30:40.000 --> 30:44.500 align:start position:0%
-We could, it would just be different. Yeah.
+[Brandt] We could, it would just be different. Yeah.
 
 30:44.500 --> 30:46.100
-[Unknown] Can I try explaining this?
+[Mark] Can I try explaining this?
 
 30:46.500 --> 30:47.500
 [Brandt] Yeah, go ahead.
 
 30:47.700 --> 30:49.100
-[Unknown] It's specializaion.
+[Mark] It's specializaiton.
 
 30:49.300 --> 30:55.840
-[???]
+You already have specialization, and you want to do that dynamically. You can't modify machine code [Unknown] You can, but it's a real pain...
 
 30:55.840 --> 30:58.120 align:start position:0%
-ahead although have and we want
+[Brandt] Although we have... [Mark] and we want the
 
 30:58.120 --> 31:00.039 align:start position:0%
-effective profiling that gives us as
+profiling that gives us as
 
 31:00.039 --> 31:02.600 align:start position:0%
-well, so, tier-1 stuff
+well, so the Tier 1 stuff
 
 31:02.600 --> 31:04.120 align:start position:0%
 because we're effectively
@@ -2391,10 +2391,10 @@ because we're effectively
 specializing very quickly and dynamically
 
 31:07.000 --> 31:26.159
-we can... [???]
+we can eventually get profiling information as well. So we get the free profiling stuff that we set up for. Just generating maching code isn't that useful. It's not that we can't do it quickly, [???]
 
 31:27.000 --> 31:28.519 align:start position:0%
-Another thing too, I realized
+[Brandt] Another thing I realized
 
 31:28.519 --> 31:31.039 align:start position:0%
 I didn't mention: The reason that the
@@ -2421,19 +2421,19 @@ heavily, which is something you
 wouldn't want to do in a real-time JIT. Yes?
 
 31:43.950 --> 31:46.639 align:start position:0%
-[Unknown] When you generate the machine
+[Pablo] When you generate the machine
 
 31:46.639 --> 31:50.500 align:start position:0%
-code can you pass the equivalent to
+code, can you pass the equivalent to
 
 31:51.960 --> 31:54.500 align:start position:0%
 compiler flags? [Brandt] Yeah. We're using clang.
 
 31:54.700 --> 31:55.700
-[Unkown] [???]
+[Pablo] Oh, so it's clang directly?
 
 31:55.700 --> 32:00.200
-[Brandt] Yes. Yeah. So we compile first
+[Brandt] Yes. We compile first
 
 32:00.240 --> 32:02.559 align:start position:0%
 using clang and that turns C code into
@@ -2463,10 +2463,10 @@ replacement that we'll change in the future.
 And then compile again to the ELF.
 
 32:25.100 --> 32:27.720 align:start position:0%
-[Carol] And you said it was under your org?
+[Carol] And you said it was under your org [on GitHub]?
 
 32:27.720 --> 32:29.350 align:start position:0%
-[Brandt] Yeah, yeah. So my user, Brandt Bucher,
+[Brandt] Yeah, yeah. So my user, @brandtbucher,
 
 32:29.350 --> 32:31.200 align:start position:0%
 it's on my fork of CPython.
@@ -2475,13 +2475,13 @@ it's on my fork of CPython.
 [Carol] Oh, it's on the fork of CPython.
 
 32:32.500 --> 32:34.500 align:start position:0%
-(Yes.) [Unknown] Show the URL again. (Yes.)
+(Yes.) [Guido] Show the URL again. (Yes.)
 
 32:37.750 --> 32:40.195
 [Brandt] That's the URL.
 
 32:40.195 --> 32:43.000
-So it's the "justin" branch of brandtbucher/cpython
+So it's the `justin` branch of brandtbucher/cpython
 
 32:43.000 --> 32:46.080 align:start position:0%
 And if you go to tools/jit, there's
@@ -2499,7 +2499,7 @@ install LLVM. [Carol] Sweet.
 approach, than the what you did so far.
 
 32:53.600 --> 32:55.480 align:start position:0%
-But once you have a [???] trace and you
+But once you have a linear trace and you
 
 32:55.480 --> 32:57.919 align:start position:0%
 can have individual calls with this function
@@ -2523,25 +2523,25 @@ paper did have good success with is
 actually compiling super-instructions
 
 33:11.360 --> 33:14.480 align:start position:0%
-of common pairs or triples, because then
+for common pairs or triples. Because then
 
 33:14.480 --> 33:17.440 align:start position:0%
 it really allows LLVM to optimize across...
 
 33:17.440 --> 33:19.559 align:start position:0%
-Especially for for example, like,
+For  example,
 
 33:19.559 --> 33:21.000 align:start position:0%
 obvious things that we may want to look
 
 33:21.000 --> 33:25.639 align:start position:0%
-at are, when we, so the micro-ops are
+at are... So the micro-ops are
 
 33:25.639 --> 33:27.639 align:start position:0%
 kind of expanded from a single
 
 33:27.639 --> 33:30.039 align:start position:0%
-instruction, I would imagine that in
+instruction. I would imagine that in
 
 33:30.039 --> 33:32.080 align:start position:0%
 many cases we aren't able to optimize
@@ -2559,22 +2559,22 @@ instruction. So that'd be sort of low-
 hanging fruit for things that we could
 
 33:37.279 --> 33:39.600 align:start position:0%
-compile and, again, when we're just
+compile. And again, when we're just
 
 33:39.600 --> 33:42.039 align:start position:0%
 walking over we can window over and see
 
 33:42.039 --> 33:45.320 align:start position:0%
-if we have anything that's...
+if we have anything that's [redundant].
 
 33:45.320 --> 33:48.000 align:start position:0%
-[Unknown] [???] really involve the compiler and...
+[Antonio] [This?] doesn't really involve the compiler and...
 
 33:48.800 --> 33:52.150 align:start position:0%
-[Brandt] Exactly and and right now we have,
+[Brandt] Exactly and and right now we have
 
 33:52.200 --> 33:56.559 align:start position:0%
-like, we have, one template for every
+one template for every
 
 33:56.559 --> 33:59.360 align:start position:0%
 micro-op, so like 200-some odd
@@ -2583,40 +2583,40 @@ micro-op, so like 200-some odd
 templates. In the paper they generated
 
 34:01.639 --> 34:05.100 align:start position:0%
-as many as like 10,000 (combinations) Yes.
+as many as like 10_000. [Guido] Combinations? [Brandt] Yes.
 
 34:05.100 --> 34:06.960 align:start position:0%
 Not only for combinations but also,
 
 34:06.960 --> 34:09.320 align:start position:0%
-like, for example, if you have some
+for example, for some
 
 34:09.320 --> 34:12.560 align:start position:0%
-instructions, for example, the
+instructions the
 
 34:12.560 --> 34:14.159 align:start position:0%
 control flow changes based on the value
 
 34:14.159 --> 34:16.919 align:start position:0%
-of the op-arg, so it may make sense to
+of the oparg, so it may make sense to
 
 34:16.919 --> 34:19.560 align:start position:0%
-actually burn in values of the op-arg, not
+actually burn in values of the oparg, not
 
 34:19.560 --> 34:22.040 align:start position:0%
-actually at JIT time, but ahead of time
+at JIT time, but ahead of time
 
 34:22.040 --> 34:23.760 align:start position:0%
-where you hard code those values and LLVM
+where you hardcode those values. And LLVM
 
 34:23.760 --> 34:25.480 align:start position:0%
-can optimize based on them and the op-arg
+can optimize based on them and the oparg
 
 34:25.480 --> 34:28.159 align:start position:0%
 is completely removed. Then there's
 
 34:28.159 --> 34:29.760 align:start position:0%
-also super-instructions, and there
+also super-instructions, and
 
 34:29.760 --> 34:31.760 align:start position:0%
 there's all sorts of games you can play.
@@ -2628,10 +2628,10 @@ Another example would be if you're
 lifting things from stack items into
 
 34:35.960 --> 34:39.399 align:start position:0%
-registers, if you are kind of keeping
+registers, if you are keeping
 
 34:39.399 --> 34:41.359 align:start position:0%
-that mapping of sstack items to registers,
+that mapping of stack items to registers,
 
 34:41.359 --> 34:42.760 align:start position:0%
 you may want to compile variants for
@@ -2652,7 +2652,7 @@ Victor again.
 [Victor] So what is your proposal?
 
 34:56.300 --> 34:58.760 align:start position:0%
-Do you want to to merge, or do
+Do you want to to merge your work, or do
 
 34:58.760 --> 35:02.599 align:start position:0%
 you want to maintain it outside Python for now?
@@ -2685,7 +2685,7 @@ If not, this has been a long-lived branch
 since like May, and so, if it's
 
 35:24.160 --> 35:25.960 align:start position:0%
-any testament to like how easy it is to
+any testament to how easy it is to
 
 35:25.960 --> 35:27.880 align:start position:0%
 maintain this stuff, a lot of stuff has
@@ -2700,7 +2700,7 @@ this branch up to date, and improving
 during that time, has not been very difficult.
 
 35:36.000 --> 35:38.839 align:start position:0%
-Ken even borrowed,
+Ken even borrowed --
 
 35:38.839 --> 35:40.400 align:start position:0%
 he basically merged this branch into his
@@ -2709,25 +2709,25 @@ he basically merged this branch into his
 own branch a while back when he was
 
 35:42.880 --> 35:45.160 align:start position:0%
-playing around with optimizing stuff
+playing around with the optimizing stuff
 
 35:45.160 --> 35:46.599 align:start position:0%
 and wanted to see what would happen if
 
 35:46.599 --> 35:49.119 align:start position:0%
-he JITted it. Ken, is it easy to, like, add
+he JITted it. Ken, is it easy to add
 
 35:49.119 --> 35:51.520 align:start position:0%
-new byte-codes and work with the JIT as
+new bytecodes and work with the JIT as
 
 35:51.520 --> 35:55.600 align:start position:0%
-a, like, a API? [Ken] This is a [???] question,
+an API? [Ken] This is a rigged question,
 
 35:55.600 --> 35:57.680 align:start position:0%
 but yes.
 
 35:58.500 --> 36:00.560 align:start position:0%
-Yeah, the good thing is that you just
+The good thing is that you just
 
 36:00.560 --> 36:02.640 align:start position:0%
 need to install LLVM,
@@ -2739,16 +2739,16 @@ and the script will automatically
 generate it for you.
 
 36:07.510 --> 36:09.319
-So, you don't actually need to
+So you don't actually need to
 
 36:09.319 --> 36:12.560 align:start position:0%
 know how it works in the background. (Yeah.)
 
 36:12.560 --> 36:14.520 align:start position:0%
-Oh, and, because like you said at one time
+Oh, and because like you said at one time,
 
 36:14.520 --> 36:16.560 align:start position:0%
-patching in is really simple, so we
+patching in is really simple, we
 
 36:16.560 --> 36:18.000 align:start position:0%
 actually had to modify the patching
@@ -2757,7 +2757,7 @@ actually had to modify the patching
 because our patches were of different
 
 36:20.560 --> 36:24.119 align:start position:0%
-types than [???] tracers, but even then, like,
+types than linear tracers, but even then,
 
 36:24.119 --> 36:25.400 align:start position:0%
 the file is just a for loop like you
@@ -2769,10 +2769,10 @@ mentioned, and memcpy, so really simple to
 modify. [Brandt] Yeah. The actual code that JITs
 
 36:30.400 --> 36:33.560 align:start position:0%
-and copies and patches, like, of those 300
+and copies and patches: of those 300
 
 36:33.560 --> 36:37.280 align:start position:0%
-lines of fairly simple C, like
+lines of fairly simple C,
 
 36:37.280 --> 36:38.880 align:start position:0%
 the hot loop where we're actually just
@@ -2781,13 +2781,13 @@ the hot loop where we're actually just
 walking over stuff selecting stencils
 
 36:40.599 --> 36:42.520 align:start position:0%
-and patching stuff is like maybe 20
+and patching stuff is maybe 20
 
 36:42.520 --> 36:44.920 align:start position:0%
-lines of code. The rest is sort of
+lines of code. The rest is,
 
 36:44.920 --> 36:47.599 align:start position:0%
-like handling permissions on Windows and
+like, handling permissions on Windows and
 
 36:47.599 --> 36:50.700 align:start position:0%
 Mac and all that kind of fun.
@@ -2799,10 +2799,10 @@ Mac and all that kind of fun.
 Python? I mean just technically,
 
 36:57.000 --> 36:59.300 align:start position:0%
-I don't know if it make sense or is it,
+I don't know if it make sense or is
 
 36:59.500 --> 37:01.200
-is the implementation [???]
+the implementation entangled
 
 37:01.200 --> 37:03.400
 with the implementation of Python itself?
@@ -2811,7 +2811,7 @@ with the implementation of Python itself?
 [Brandt] I would say that since
 
 37:04.440 --> 37:06.800 align:start position:0%
-we are using the same micro-ops as tier-2,
+we are using the same micro-ops as Tier 2,
 
 37:06.800 --> 37:09.600 align:start position:0%
 we're pretty tightly coupled to the implementation.
@@ -2829,22 +2829,22 @@ One thing that we would need...
 So, when we actually compile the code,
 
 37:25.280 --> 37:28.720 align:start position:0%
-we basically in those header files,
+in those header files,
 
 37:28.720 --> 37:30.040 align:start position:0%
-if you have a bite code instruction that
+if you have a bytecode instruction that
 
 37:30.040 --> 37:33.079 align:start position:0%
-calls, for example, PyNumber_Add, right,
+calls, for example, PyNumber_Add,
 
 37:33.079 --> 37:35.300 align:start position:0%
-that's a symbol that you need to "link against".
+that's a symbol that you need to “link against”.
 
 37:35.850 --> 37:36.760 align:start position:0%
-And so the way we do that in
+And the way we do that in
 
 37:36.760 --> 37:38.880 align:start position:0%
-the header file is we actually just put
+the header file is we just put the
 
 37:38.880 --> 37:41.599 align:start position:0%
 address of PyNumber_Add as an addend for
@@ -2883,7 +2883,7 @@ need to initialize all the stencils when
 the extension or whatever was first
 
 38:04.760 --> 38:08.640 align:start position:0%
-loaded, by walking over and the
+loaded, by walking over the
 
 38:08.640 --> 38:10.640 align:start position:0%
 stencils and actually resolving all of
@@ -2892,16 +2892,16 @@ stencils and actually resolving all of
 those symbols, finding them in the
 
 38:12.280 --> 38:15.160 align:start position:0%
-current process with using dlsym, or
+current process using dlsym, or
 
 38:15.160 --> 38:17.119 align:start position:0%
-whatever the windows equivalent is,
+whatever the Windows equivalent is,
 
 38:17.119 --> 38:18.680 align:start position:0%
 walking over them and actually fixing up
 
 38:18.680 --> 38:21.720 align:start position:0%
-those add-ins, and then it would mostly
+those addends, and then it would mostly
 
 38:21.720 --> 38:25.359 align:start position:0%
 be the same. But that sounds a lot
@@ -2919,7 +2919,7 @@ public symbols. So it is doable in
 theory. I think the ergonomics make it
 
 38:34.680 --> 38:37.600 align:start position:0%
-like probably not the best option.
+probably not the best option.
 
 38:37.600 --> 38:38.850
 [Victor] I'm just trying to understand,
@@ -2943,22 +2943,22 @@ So then, don't build the JIT.
 Or I'll build it for you, and I'll host it in a container.
 
 38:58.000 --> 39:01.500
-[Victor] [???] wants the JIT?
+[multiple people talking] [Victor] Do the users want the JIT?
 
 39:04.480 --> 39:06.359 align:start position:0%
 [Unknown] That's why that's behind a configure flag for now.
 
 39:06.350 --> 39:09.400 align:start position:0%
-The answer to that, this unknown,
+The answer to that is unknown.
 
 39:09.400 --> 39:11.440 align:start position:0%
-this proves very useful, then we find way
+If this proves very useful, then we find way
 
 39:11.440 --> 39:12.800
 forward to actually do it.
 
 39:13.000 --> 39:14.750
-[Unknown] You can't at the same time
+[Guido] You can't at the same time
 
 39:14.750 --> 39:16.200 align:start position:0%
 say that you want the JIT,
@@ -2970,7 +2970,7 @@ and say that you cannot
 have this dependency, right?
 
 39:22.400 --> 39:25.079 align:start position:0%
-[Uknown] This is what I want.
+[Victor] This is what I want.
 
 39:25.079 --> 39:28.640 align:start position:0%
 [Brandt] I want a million dollars.
@@ -2979,13 +2979,13 @@ have this dependency, right?
 We all want, things I get it.
 
 39:31.500 --> 39:34.000 align:start position:0%
-Yuri, did you have your hand up?
+Yury, did you have your hand up?
 
 39:34.000 --> 39:37.520 align:start position:0%
-[Yuri] Yeah, so, as far as I understand there's pretty
+[Yury] As far as I understand there's pretty
 
 39:37.520 --> 39:39.160 align:start position:0%
-much no alternative to this, like if you
+much no alternative to this. If you
 
 39:39.160 --> 39:41.880 align:start position:0%
 want to go with the JIT, it's either us
@@ -2994,22 +2994,22 @@ want to go with the JIT, it's either us
 spending a lot of resources
 
 39:43.900 --> 39:46.000
-handwriting all this...
+handwriting all these
 
 39:48.600 --> 39:50.800 align:start position:0%
-handwriting all of these kinds of code paths,
+code paths,
 
 39:50.800 --> 39:53.280 align:start position:0%
 generating them, which is one of
 
 39:53.280 --> 39:55.040 align:start position:0%
-the hardest parts of the GIT. Like, this is
+the hardest parts of the JIT. This is
 
 39:55.040 --> 39:58.800 align:start position:0%
 a nice hack, it allows us to save a lot of
 
 39:58.800 --> 40:01.800 align:start position:0%
-resources, it seems like the plan should be
+resources. [???] It seems like the plan should be
 
 40:01.800 --> 40:04.900
 to merge this to the main branch
@@ -3018,10 +3018,10 @@ to merge this to the main branch
 as soon as possible so that
 
 40:05.900 --> 40:07.900
-[???] can continue working on it.
+we then can continue working on it.
 
 40:09.500 --> 40:12.500 align:start position:0%
-Like, really, am I missing something? Is there...
+Am I missing something? Is there an alternative?
 
 40:12.500 --> 40:15.450
 [Brandt] No, that's how I feel as well.
@@ -3033,22 +3033,22 @@ And another thing too, just since you
 mentioned handwriting assembly, is that
 
 40:19.319 --> 40:21.000 align:start position:0%
-the two are not mutually exclusive. So
+the two are not mutually exclusive.
 
 40:21.000 --> 40:22.640 align:start position:0%
-for example if we see that there's a
+For example if we see that there's a
 
 40:22.640 --> 40:25.119 align:start position:0%
-really common op-code, and we see that we
+really common opcode, and we see that we
 
 40:25.119 --> 40:27.720 align:start position:0%
-can actually write better than LLVM can,
+can actually write it better than LLVM can,
 
 40:27.720 --> 40:30.040 align:start position:0%
-for whatever reason, we can do that. The,
+for whatever reason, we can do that. The
 
 40:30.040 --> 40:31.720 align:start position:0%
-the two play very nicely together. So it'd
+two play very nicely together. So it'd
 
 40:31.720 --> 40:34.440 align:start position:0%
 just be in that build script, the 700
@@ -3057,25 +3057,25 @@ just be in that build script, the 700
 lines of Python or whatever, we just
 
 40:36.160 --> 40:37.480 align:start position:0%
-special case that op-code and say: "Hey,
+special case that op-code and say: “Hey,
 
 40:37.480 --> 40:39.650 align:start position:0%
-use this assembly file instead". Yeah?
+use this assembly file instead”. Yeah?
 
 40:39.650 --> 40:41.500 align:start position:0%
-[Yuri] Quick question, followup question on the,
+[Yury] Quick follow-up question on the
 
 40:41.550 --> 40:42.800
-on the benchmark numbers that you showed
+benchmark numbers that you showed
 
 40:42.800 --> 40:44.300
 on one of the slides.
 
 40:44.300 --> 40:45.800 align:start position:0%
-So basically what they did they
+So what they did is they
 
 40:45.800 --> 40:47.450 align:start position:0%
-just replaced... So for example,
+just replaced... For example,
 
 40:47.450 --> 40:49.200
 in the case of LuaJIT compiler,
@@ -3084,7 +3084,7 @@ in the case of LuaJIT compiler,
 they just replaced the handwritten
 
 40:51.800 --> 40:53.800
-code paths, [???] handwritten assembly,
+code paths, the handwritten assembly
 
 40:53.800 --> 40:55.900
 and what not, where they stopped,
@@ -3096,10 +3096,10 @@ and they generated with this approach
 from the slow interpreter?
 
 40:59.500 --> 41:02.440 align:start position:0%
-[Brandt] No, it was a completely, like, new
+[Brandt] No, it was a completely new
 
 41:02.440 --> 41:04.480 align:start position:0%
-implementation that they wrote. So if you
+implementation that they wrote. If you
 
 41:04.480 --> 41:06.160 align:start position:0%
 go to the blog post that I linked to
@@ -3129,13 +3129,13 @@ implementing a LuaJIT, (okay) right, and
 and so it's the...
 
 41:24.140 --> 41:25.200
-[Yuri] So that's [???]?
+[Yury] So that's from super fast, then?
 
 41:25.200 --> 41:27.900 align:start position:0%
-[Brandt] Yeah yeah, so it's the comparison of his,
+[Brandt] Yeah yeah, so it's the comparison of his
 
 41:27.900 --> 41:30.200 align:start position:0%
-just, from scratch implementation versus an
+from scratch implementation versus an
 
 41:30.200 --> 41:33.200 align:start position:0%
 established fast implementation.
@@ -3150,16 +3150,16 @@ established fast implementation.
 [Unknown] You could probably find it just by
 
 41:41.040 --> 41:43.700 align:start position:0%
-Googling for copy... [Brandt] Yeah if you,
+Googling for copy-and-patch. [Brandt] Yeah,
 
 41:43.700 --> 41:44.950
-if you search for,
+if you search for
 
 41:44.950 --> 41:47.000
-oh wait did I skip it already? Hang on...
+... oh wait did I skip it already? Hang on.
 
 41:47.600 --> 41:49.950 align:start position:0%
-[Unknown] I never saw the link to the blog post.
+[Guido] I never saw the link to the blog post.
 
 41:49.950 --> 41:52.500 align:start position:0%
 [Brandt] It was underneath the paper.
@@ -3186,16 +3186,16 @@ the bottom one is the blog post.
 [Carol] And I just posted, they did a
 
 42:11.200 --> 42:14.440 align:start position:0%
-presentation a few months ago as well.
+presentation a few months ago as well. Good slides.
 
 42:14.440 --> 42:17.200 align:start position:0%
-[Brandt] Was that for the paper? [Carol] Good slides.
+[Brandt] Was that for the paper? [Yeah]
 
 42:17.200 --> 42:19.250 align:start position:0%
 [Greg] Just as an FYI,
 
 42:19.250 --> 42:21.400 align:start position:0%
-like, that may be a new paper, but we
+that may be a new paper, but we
 
 42:21.400 --> 42:23.079 align:start position:0%
 were doing this type of approach for a
@@ -3222,16 +3222,16 @@ are very fast to JIT.
 [Brandt] Okay, let's ship it in a product!
 
 42:36.200 --> 42:40.800
-[Greg] It was like [???]
+[Greg] It was intermediate, quick-to-produce code, and there was a more optimized one later.
 
 42:41.000 --> 42:43.359 align:start position:0%
 [Brandt] Yeah, I mean it is, I kind of
 
 42:43.359 --> 42:46.720 align:start position:0%
-view this as a, like, a baseline, but a
+view this as a baseline, but a
 
 42:46.720 --> 42:48.880 align:start position:0%
-really good one, (yeah) right, and so if we
+really good one. (yeah) And so if we
 
 42:48.880 --> 42:50.559 align:start position:0%
 wanted to have another tier where we
@@ -3240,16 +3240,16 @@ wanted to have another tier where we
 pull out all the stops on top of this
 
 42:52.000 --> 42:54.119 align:start position:0%
-that's a bridge we could cross, right.
+that's a bridge we could cross, right?
 
 42:54.119 --> 42:56.300 align:start position:0%
-[Greg] This is easy to maintain, like,
+[Greg] This is easy to maintain:
 
 42:56.300 --> 42:57.850
- you don't have to modify assembly,
+you don't have to modify assembly,
 
 42:57.850 --> 43:02.000
-you modify the C code, ...
+you modify the C code.
 
 43:02.750 --> 43:04.359 align:start position:0%
 [Yury] Another question in terms of the code
@@ -3258,7 +3258,7 @@ you modify the C code, ...
 style. Will you need to change a lot?
 
 43:07.319 --> 43:09.040 align:start position:0%
-So like, I know that you compile some of the
+I know that you compile some of the
 
 43:09.040 --> 43:11.000
 functions already in the prototype, but,
@@ -3270,19 +3270,19 @@ will the code style change?
 Or, it's essentially the same thing,
 
 43:15.000 --> 43:18.839
-maybe with a couple of [???] on top.
+maybe with a couple of macros on top?
 
 43:19.500 --> 43:21.500
-[Brandt] When you say the code style,
+[Brandt] When you say the code style...
 
 43:21.500 --> 43:23.200
-so, we extract,
+so, we extract...
 
 43:23.200 --> 43:25.079 align:start position:0%
-so basically, [Yury] the way you write
+so basically... [Yury] the way you write
 
 43:25.079 --> 43:28.850 align:start position:0%
-code, essentially, (Python code?) op-codes, yes,
+code. (Python code?) op-codes.
 
 43:29.000 --> 43:31.000
 (oh) will this change? [Brandt] I'm sure
@@ -3294,7 +3294,7 @@ you'll see lots of blog posts of
 how to get the most out of CPython's
 
 43:34.100 --> 43:36.350
-new JIT, you know,
+new JIT.
 
 43:36.350 --> 43:38.700
 [Greg] But those are all written by, you know,
@@ -3309,7 +3309,7 @@ new JIT, you know,
 different than the specializing
 
 43:50.680 --> 43:52.640 align:start position:0%
-interpreter, where it's just, we play to
+interpreter, where we play to
 
 43:52.640 --> 43:54.480 align:start position:0%
 the benchmarks, the benchmarks we take to
@@ -3321,10 +3321,10 @@ be somewhat realistic, and we look to
 confirm that that is true in practice.
 
 43:59.680 --> 44:01.880 align:start position:0%
-Right, um, and I'm sure that there are
+And I'm sure that there are
 
 44:01.880 --> 44:04.960 align:start position:0%
-people who, you know, like, try to optimize
+people who try to optimize
 
 44:04.960 --> 44:06.640 align:start position:0%
 for the specializing interpreter, and I'm
@@ -3345,37 +3345,37 @@ speeding up, kind of, the world.
 Pablo?
 
 44:16.300 --> 44:18.650
-[Pablo] We already [???] want I want everyone
+[Pablo] We already talked about it [privately?], but I want everyone
 
 44:18.650 --> 44:21.400
-to, kind of, discuss, so,
+to discuss:
 
 44:21.400 --> 44:24.800
-what is the debugging situation of this code?
+What is the debugging situation of this code?
 
 44:24.800 --> 44:26.200
 For instance, one of the things
 
 44:26.200 --> 44:28.500
-I mentioned I was, uh, worried that
+I mentioned was that I was worried that
 
 44:28.500 --> 44:33.250
-if the JIT [???] any sort of way to tell the [???] 
+the JIT doesn't have, by default, any sort of way to tell the debugger
 
 44:33.250 --> 44:36.500
-that, hey, the way you are going through me,
+that, hey, this is the way you're going through me?
 
 44:36.500 --> 44:40.750
-[???]
+I assume that if you crash and use gdb or any other debugger, you can't go through the code, right?
 
 44:41.550 --> 44:44.559 align:start position:0%
-[Brandt] Yeah, um, so, I don't know enough about
+[Brandt] Yeah, I don't know enough about
 
 44:44.559 --> 44:46.440 align:start position:0%
-unwind tables, and that, and like, DWARF
+unwind tables and DWARF
 
 44:46.440 --> 44:48.440 align:start position:0%
-and all of that, to give a good answer. I
+and all of that to give a good answer. I
 
 44:48.440 --> 44:50.520 align:start position:0%
 can tell you that I don't include any
@@ -3387,7 +3387,7 @@ unwind tables or DWARF in the JITted
 code and we disable frame pointers. But,
 
 44:55.680 --> 44:56.680 align:start position:0%
-if it's it's something that could be
+if it's something that could be
 
 44:56.680 --> 44:59.160 align:start position:0%
 reused from the original ELF, then
@@ -3399,22 +3399,22 @@ that's something that would be easy to
 harvest, otherwise we would have to
 
 45:02.280 --> 45:03.600
-kind of emit it ourselves.
+emit it ourselves.
 
 45:03.600 --> 45:06.000
-[Pablo] And one cheap way would be, maybe to,
+[Pablo] And one cheap way,
 
 45:06.000 --> 45:08.200 align:start position:0%
-maybe at the beginning when, I mean,
+maybe, at the beginning when
 
 45:08.200 --> 45:10.500 align:start position:0%
-at the beginning when we are playing
+we are playing
 
 45:10.500 --> 45:12.760 align:start position:0%
-with it, maybe achieve ways to allow
+with it
 
 45:12.760 --> 45:15.359 align:start position:0%
-at least, to or detect if you're building
+at least, detect if you're building
 
 45:15.359 --> 45:17.040 align:start position:0%
 Python itself with frame pointers and
@@ -3423,10 +3423,10 @@ Python itself with frame pointers and
 then generating the template with frame
 
 45:18.800 --> 45:21.200
-pointers (yeah) I assume you are going to copy
+pointers? (yeah) I assume you are going to copy
 
 45:21.200 --> 45:22.800
-[???], right?
+whatever's been generated, right?
 
 45:22.800 --> 45:24.100 align:start position:0%
 [Brandt] Yeah, so we're disabling frame
@@ -3438,13 +3438,13 @@ pointers right now, just because we're
 passing arguments in registers, and that's a
 
 45:26.960 --> 45:29.079 align:start position:0%
-valuable register, but I mean this
+valuable register. But, this
 
 45:29.079 --> 45:30.520 align:start position:0%
-argument's been had a million times, so
+argument's been had a million times.
 
 45:30.520 --> 45:33.079 align:start position:0%
-we can build with frame pointers, you
+We can build with frame pointers, you
 
 45:33.079 --> 45:34.880 align:start position:0%
 know, it's easy enough just to say don't
@@ -3465,22 +3465,22 @@ were to do it myself. [Pablo] Well at least
 having an escape hatch, I think, a first kind of
 
 45:46.800 --> 45:48.000 align:start position:0%
-line of it...
+line of it? If it's cheap to have frame pointers
 
 45:48.000 --> 45:59.000
-[???]
+In case I wanted to lean more on the debugging side? But maybe this is too early...
 
 45:59.520 --> 46:04.200 align:start position:0%
-[Brandt] Yeah, if we were extract like if we
+[Brandt] Yeah, if we
 
 46:04.200 --> 46:06.760 align:start position:0%
 could just extract all of this stuff
 
 46:06.760 --> 46:09.079 align:start position:0%
-from the ELF file is that something that
+from the ELF file, is that something that
 
 46:09.079 --> 46:11.680 align:start position:0%
-could be reused or would need to be
+could be reused, or would need to be
 
 46:11.680 --> 46:13.720 align:start position:0%
 different every time we emit a copy of
@@ -3495,40 +3495,40 @@ that stencil?
 relocations as well.
 
 46:18.300 --> 46:20.500
-[Brandt] So there's relocations in the,
+[Brandt] So there's relocations in the
 
 46:20.500 --> 46:23.100 align:start position:0%
-like, the unwind tables and stuff?
+unwind tables and stuff?
 
 46:23.100 --> 46:24.839 align:start position:0%
 [Pablo] The DWARF tree has like what is
 
 46:24.839 --> 46:27.440 align:start position:0%
-called [???], and those will change when you
+called DW_AT_ranges, and those will change when you
 
 46:27.440 --> 46:29.319 align:start position:0%
 place the code in different places, so
 
 46:29.319 --> 46:32.250 align:start position:0%
-you need to somehow say, "Oh this,
+you need to somehow say, “Oh, this
 
 46:32.250 --> 46:34.750 align:start position:0%
-this code now leads here", so you need to say
+code now lives here”. You need to say
 
 46:34.750 --> 46:37.100
-[???] address [???] things,
+“Oh, I know the address” when you generate the things.
 
 46:37.300 --> 46:39.000
-but most of the annoying stuff
+But most of the annoying stuff
 
 46:39.000 --> 46:40.700 align:start position:0%
 to generate you can just copy for this.
 
 46:40.700 --> 46:42.960 align:start position:0%
-[Brandt] Okay, yeah, if it's anything like the
+[Brandt] Okay, if it's anything like the
 
 46:42.960 --> 46:46.280 align:start position:0%
-mechanics of extracting, like for example,
+mechanics of extracting, for example,
 
 46:46.280 --> 46:50.559 align:start position:0%
 static data, BSS data, executable text, and
@@ -3537,22 +3537,22 @@ static data, BSS data, executable text, and
 processing relocations on those, then the
 
 46:52.160 --> 46:53.700 align:start position:0%
-mechanics are almost identical, it sounds.
+mechanics are almost identical, it sounds like.
 
 46:53.700 --> 46:56.000 align:start position:0%
-[Pablo] It depends on how annoying [???]
+[Pablo] It depends on how annoying LLVM makes it
 
 46:56.000 --> 46:59.079 align:start position:0%
 to retrieve it from the file, but if it's
 
 46:59.079 --> 47:01.750 align:start position:0%
-very easy and people have some [???] output
+very easy and you can have some JSON output?
 
 47:01.750 --> 47:04.559 align:start position:0%
-I suppose it's (yeah) like, not like something that I
+(yeah) I suppose it's something that I
 
 47:04.559 --> 47:06.500 align:start position:0%
-think is super super important.
+think is super super important at this stage.
 
 47:06.500 --> 47:08.500 align:start position:0%
 [Brandt] Yeah. Two flags that I pass to clang
@@ -3564,7 +3564,7 @@ currently are: omit frame pointer, and no
 asynchronous unwind tables. So if
 
 47:16.160 --> 47:18.040 align:start position:0%
-we, if that's the sort of stuff that
+that's the sort of stuff that
 
 47:18.040 --> 47:19.520 align:start position:0%
 just gets dumped in the ELF file and is
@@ -3579,7 +3579,7 @@ promising path forward for a good
 debugging experience.
 
 47:26.300 --> 47:28.100
-[Greg] Other JITs like [???] has dealt with
+[Greg] Other JITs like Java have dealt with
 
 47:28.100 --> 47:29.400
 a lot of this stuff in the past,
@@ -3594,7 +3594,7 @@ for how they have debugging work.
 [Brandt] Oh, I didn't see...
 
 47:36.350 --> 47:37.800
-[Unknown] I think we're getting too much
+[Petr] I think we're getting too much
 
 47:37.800 --> 47:40.450 align:start position:0%
 into implementation details.
@@ -3603,4 +3603,4 @@ into implementation details.
 [Brandt] I'll be here all week!
 
 47:43.600 --> 47:48.559
-[Unknown] Thanks Brandt!
+[Petr] Thanks Brandt!
