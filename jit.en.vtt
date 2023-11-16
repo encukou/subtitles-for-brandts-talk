@@ -1077,7 +1077,7 @@ code into executable memory, and then we
 want to patch up the instructions that
 
 13:51.959 --> 13:53.480 align:start position:0%
-need to have run some data encoded in
+need to have runtime data encoded in
 
 13:53.480 --> 13:55.519 align:start position:0%
 them. These are relocations for
@@ -1326,7 +1326,7 @@ implementation itself: at build time
 it is about 700 lines of complex Python.
 
 17:03.920 --> 17:06.240 align:start position:0%
-This is python code that handles
+This is Python code that handles
 
 17:06.240 --> 17:09.039 align:start position:0%
 actually extracting all the cases,
@@ -1440,7 +1440,7 @@ that work at runtime and in C code. I
 think we can all agree that we prefer
 
 18:33.840 --> 18:35.600 align:start position:0%
-writing python to C. Yeah, Pablo, did you have
+writing Python to C. Yeah, Pablo, did you have
 
 18:35.600 --> 18:39.080 align:start position:0%
 a question? — [Pablo] Yeah, so I'm curious why you
@@ -1878,7 +1878,7 @@ like, hardware integration, we can just
 piggyback on LLVM. So if there's a way to
 
 24:14.559 --> 24:16.640 align:start position:0%
-make LLVM uh use the GPUs more
+make LLVM use the GPUs more
 
 24:16.640 --> 24:18.360 align:start position:0%
 effectively then we can harness that too.
@@ -1896,7 +1896,7 @@ it possible on Linux to generate
 the generated part for all platforms, from Linux?
 
 24:32.500 --> 24:34.800
-[Unknown] You can do a cross-compiler container,
+[Greg] You can do a cross-compiler container,
 
 24:34.900 --> 24:36.039
 with 20 cross-compilers in it, I think.
@@ -1983,7 +1983,7 @@ in Python? [Brandt] I have no plans to.
 [Brandt] You can host a bunch of them somewhere if you want.
 
 25:46.400 --> 25:47.360 align:start position:0%
-[Unknown] It's like, I'm not sure we're going to
+[Greg] It's like, I'm not sure we're going to
 
 25:47.360 --> 25:48.919 align:start position:0%
 need a container. Basically it sounds
@@ -2067,7 +2067,7 @@ JIT if you want to.” And if you do pass
 the flag then we build the JIT.
 
 26:56.000 --> 26:59.279 align:start position:0%
-[Unknown] You can also leave work for a future of
+[Greg] You can also leave work for a future of
 
 26:59.279 --> 27:00.100
 seeing if you can make something
@@ -2130,7 +2130,7 @@ executable memory, which is something
 I need to fix. So this won't work on
 
 27:44.039 --> 27:46.120 align:start position:0%
-Somoma because currently the memory is
+Sonoma because currently the memory is
 
 27:46.120 --> 27:47.799 align:start position:0%
 read+execute, but that's on my list of
@@ -2157,10 +2157,10 @@ way to ask for it, to say...
 the JIT... In the flags when you mmap the
 
 28:05.720 --> 28:08.600 align:start position:0%
-memory, you can say MAP_JIT, I think,
+memory, you can say MMAP_JIT, I think,
 
 28:08.600 --> 28:11.640 align:start position:0%
-and that says I'm a JIT. [Unknown] I think you
+and that says I'm a JIT. [Greg] I think you
 
 28:11.640 --> 28:13.080 align:start position:0%
 may be referring to platform
@@ -2211,7 +2211,7 @@ build it locally. I can vouch for it
 working locally.
 
 28:44.850 --> 28:47.240 align:start position:0%
-[Guido] Presumably the the release
+[Guido] Presumably the release
 
 28:47.240 --> 28:49.300 align:start position:0%
 manager needs to use that flag?
@@ -2343,7 +2343,7 @@ advantageous in the same use case for Python?
 [Guido] We currently can't translate every
 
 30:25.480 --> 30:28.279 align:start position:0%
-Tier 1 bytecode into a corresonding sequence
+Tier 1 bytecode into a corresponding sequence
 
 30:28.279 --> 30:31.240 align:start position:0%
 of Tier 2 bytecodes. [Brandt] Although we have...
@@ -2370,10 +2370,10 @@ bytecode which is much simpler than Tier 1...
 [Brandt] Yeah, go ahead.
 
 30:47.700 --> 30:49.100
-[Mark] It's specializaiton.
+[Mark] It's specialization.
 
 30:49.300 --> 30:55.840
-You already have specialization, and you want to do that dynamically. You can't modify machine code [Unknown] You can, but it's a real pain...
+You already have specialization, and you want to do that dynamically. You can't modify machine code. Well, you can, but it's a real pain...
 
 30:55.840 --> 30:58.120 align:start position:0%
 [Brandt] Although we have... [Mark] and we want the
@@ -2391,7 +2391,7 @@ because we're effectively
 specializing very quickly and dynamically
 
 31:07.000 --> 31:26.159
-we can eventually get profiling information as well. So we get the free profiling stuff that we set up for. Just generating maching code isn't that useful. It's not that we can't do it quickly, [???]
+ we can eventually get profiling information as well. So we get effectively the free profiling stuff that we set up for. Just generating target machine code isn't that useful. It's not that we can't produce it quickly, [???]
 
 31:27.000 --> 31:28.519 align:start position:0%
 [Brandt] Another thing I realized
@@ -2448,7 +2448,7 @@ do that is because we want to fix up the
 calling convention and clang doesn't
 
 32:08.960 --> 32:10.880 align:start position:0%
-actually let let us have this calling
+actually let us have this calling
 
 32:10.880 --> 32:12.880 align:start position:0%
 convention from C. So we fix up the
@@ -2529,7 +2529,7 @@ for common pairs or triples. Because then
 it really allows LLVM to optimize across...
 
 33:17.440 --> 33:19.559 align:start position:0%
-For  example,
+For example,
 
 33:19.559 --> 33:21.000 align:start position:0%
 obvious things that we may want to look
@@ -2763,7 +2763,7 @@ types than linear tracers, but even then,
 the file is just a for loop like you
 
 36:25.400 --> 36:27.520 align:start position:0%
-mentioned, and memcpy, so really simple to
+mentioned, and memcpy, so it's really simple to
 
 36:27.520 --> 36:30.400 align:start position:0%
 modify. [Brandt] Yeah. The actual code that JITs
@@ -2943,10 +2943,10 @@ So then, don't build the JIT.
 Or I'll build it for you, and I'll host it in a container.
 
 38:58.000 --> 39:01.500
-[multiple people talking] [Victor] Do the users want the JIT?
+[Laughter] [Victor] Do the users want the JIT?
 
 39:04.480 --> 39:06.359 align:start position:0%
-[Unknown] That's why that's behind a configure flag for now.
+[Greg] That's why that's behind a configure flag for now.
 
 39:06.350 --> 39:09.400 align:start position:0%
 The answer to that is unknown.
@@ -3087,7 +3087,7 @@ they just replaced the handwritten
 code paths, the handwritten assembly
 
 40:53.800 --> 40:55.900
-and what not, where they stopped,
+and whatnot, where they stopped,
 
 40:55.900 --> 40:57.500 align:start position:0%
 and they generated with this approach
@@ -3141,13 +3141,13 @@ from scratch implementation versus an
 established fast implementation.
 
 41:33.750 --> 41:35.700 align:start position:0%
-[Unknown] What blog post is that?
+[Lysandros] What blog post is that?
 
 41:35.700 --> 41:38.119 align:start position:0%
 [Brandt] I can put it back up there.
 
 41:39.100 --> 41:41.040 align:start position:0%
-[Unknown] You could probably find it just by
+[Guido] You could probably find it just by
 
 41:41.040 --> 41:43.700 align:start position:0%
 Googling for copy-and-patch. [Brandt] Yeah,
@@ -3168,7 +3168,7 @@ if you search for
 It's right... here...
 
 41:56.000 --> 41:57.800
-[Unknown] If you haven't linked those from
+[Greg] If you haven't linked those from
 
 41:57.800 --> 41:59.750
 your repo, you should check that in.
@@ -3255,7 +3255,7 @@ you modify the C code.
 [Yury] Another question in terms of the code
 
 43:04.359 --> 43:07.319 align:start position:0%
-style. Will you need to change a lot?
+style. Will you need to change it a lot?
 
 43:07.319 --> 43:09.040 align:start position:0%
 I know that you compile some of the
@@ -3462,7 +3462,7 @@ I would need to do more research if I
 were to do it myself. [Pablo] Well at least
 
 45:43.680 --> 45:46.800 align:start position:0%
-having an escape hatch, I think, a first kind of
+having an escape hatch, I think, as a first kind of
 
 45:46.800 --> 45:48.000 align:start position:0%
 line of it? If it's cheap to have frame pointers
