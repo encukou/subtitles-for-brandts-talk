@@ -432,7 +432,7 @@ call them, micro-ops), but the more
 complicated ones, like FOR_ITER_RANGE or
 
 05:38.319 --> 05:40.240 align:start position:0%
-the integer addition, many have several
+the integer addition, may have several
 
 05:40.240 --> 05:42.479 align:start position:0%
 different parts. And what's nice about
@@ -2481,7 +2481,7 @@ it's on my fork of CPython.
 [Brandt] That's the URL.
 
 32:40.195 --> 32:43.000
-So it's the justin branch of brandtbucher/cpython
+So it's the “justin” branch of brandtbucher/cpython
 
 32:43.000 --> 32:46.080 align:start position:0%
 And if you go to tools/jit, there's
